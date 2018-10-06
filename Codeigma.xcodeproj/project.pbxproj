@@ -10,7 +10,7 @@
 		7A13C6174CA3406DE2727601 /* Pods_Codeigma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */; };
 		E928A84221692E85008E46DC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84121692E85008E46DC /* RoundedView.swift */; };
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
-		E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Main.storyboard */; };
+		E9EFD9C0216860EF00EB39A4 /* Final.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Final.storyboard */; };
 		E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */; };
 		E9EFD9C52168610100EB39A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9C42168610100EB39A4 /* Assets.xcassets */; };
 		E9EFD9C82168610100EB39A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */; };
@@ -34,7 +34,7 @@
 		E928A84121692E85008E46DC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Final.storyboard; sourceTree = "<group>"; };
 		E9EFD9C2216860EF00EB39A4 /* Codeigma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Codeigma.xcdatamodel; sourceTree = "<group>"; };
 		E9EFD9C42168610100EB39A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9EFD9C72168610100EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */,
-				E9EFD9BE216860EF00EB39A4 /* Main.storyboard */,
+				E9EFD9BE216860EF00EB39A4 /* Final.storyboard */,
 				E9EFD9F9216893A200EB39A4 /* Fonts */,
 				E9EFD9F32168913D00EB39A4 /* tessdata */,
 				E9EFD9E6216876DB00EB39A4 /* Core Data */,
@@ -235,7 +235,7 @@
 				E9EFD9F42168913E00EB39A4 /* tessdata in Resources */,
 				E9EFD9C52168610100EB39A4 /* Assets.xcassets in Resources */,
 				E9EFD9F62168936B00EB39A4 /* SF-Pro-Display-Regular.otf in Resources */,
-				E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */,
+				E9EFD9C0216860EF00EB39A4 /* Final.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,12 +308,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E9EFD9BE216860EF00EB39A4 /* Main.storyboard */ = {
+		E9EFD9BE216860EF00EB39A4 /* Final.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E9EFD9BF216860EF00EB39A4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Final.storyboard;
 			sourceTree = "<group>";
 		};
 		E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */ = {

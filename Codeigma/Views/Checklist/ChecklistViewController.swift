@@ -14,6 +14,7 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var checkListTableView: UITableView!
     @IBOutlet weak var callNumberButton: UIButton!
     
+    @IBOutlet weak var doneButton: UIButton!
     var bill: Bill!
     var codes = [Code]()
    
@@ -22,18 +23,13 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
         checkListTableView.delegate = self
         checkListTableView.dataSource = self
         callNumberButton.layer.cornerRadius = callNumberButton.frame.height/2
+        doneButton.layer.cornerRadius = doneButton.frame.height/2
         
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneClicked(_:)))
-        if self.navigationController == nil {
-            print("nil")
-        }
-        callNumberButton.addTarget(self, action: #selector(doneClicked(_:)), for: .touchUpInside)
-        self.navigationController?.navigationItem.rightBarButtonItem = doneButton
         // Do any additional setup after loading the view.
     }
-    
-    @objc func doneClicked(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToDashboard", sender: nil)
+
+    @IBAction func doneClicked(_ sender: UIButton) {
+         self.performSegue(withIdentifier: "goToDashboard", sender: nil)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

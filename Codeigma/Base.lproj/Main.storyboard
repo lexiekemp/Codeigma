@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -142,6 +143,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="38" y="33"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="XAd-r3-QHw">
@@ -305,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bg2-9Y-mL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1684" y="-643"/>
+            <point key="canvasLocation" x="3113" y="33"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="vyZ-Wq-IFH">
@@ -315,8 +317,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-SU-Eq2">
-                                <rect key="frame" x="325" y="50" width="26.5" height="26"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="X" translatesAutoresizingMaskIntoConstraints="NO" id="hcs-SU-Eq2">
+                                <rect key="frame" x="325" y="50" width="20" height="20"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="highlighter" translatesAutoresizingMaskIntoConstraints="NO" id="GBq-oo-OIR">
                                 <rect key="frame" x="144" y="188" width="87" height="102"/>
@@ -356,7 +358,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nTg-tK-053" firstAttribute="trailing" secondItem="hcs-SU-Eq2" secondAttribute="trailing" constant="23.5" id="2wa-Ah-r1c"/>
+                            <constraint firstItem="nTg-tK-053" firstAttribute="trailing" secondItem="hcs-SU-Eq2" secondAttribute="trailing" constant="30" id="2wa-Ah-r1c"/>
                             <constraint firstItem="GBq-oo-OIR" firstAttribute="top" secondItem="nTg-tK-053" secondAttribute="top" constant="168" id="3Uf-JK-6Si"/>
                             <constraint firstItem="ySg-Y4-XxZ" firstAttribute="leading" secondItem="nTg-tK-053" secondAttribute="leading" constant="151" id="4LK-xh-gsI"/>
                             <constraint firstItem="hcs-SU-Eq2" firstAttribute="leading" secondItem="nTg-tK-053" secondAttribute="leading" constant="325" id="Ctt-ou-V3f"/>
@@ -397,8 +399,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="X" translatesAutoresizingMaskIntoConstraints="NO" id="rD7-xF-jfC">
-                                <rect key="frame" x="325" y="50" width="26.5" height="26"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="X" translatesAutoresizingMaskIntoConstraints="NO" id="rD7-xF-jfC">
+                                <rect key="frame" x="325" y="50" width="20" height="20"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clip_board" translatesAutoresizingMaskIntoConstraints="NO" id="HaO-Qm-W5p">
                                 <rect key="frame" x="144" y="188" width="87" height="103"/>
@@ -455,7 +457,7 @@
                             <constraint firstItem="rD7-xF-jfC" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="325" id="oGj-rD-K4g"/>
                             <constraint firstItem="74D-y0-bug" firstAttribute="centerX" secondItem="J2U-Um-0qZ" secondAttribute="centerX" id="q1c-sj-DQJ"/>
                             <constraint firstItem="HaO-Qm-W5p" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="144" id="qvZ-YN-WhC"/>
-                            <constraint firstItem="J2U-Um-0qZ" firstAttribute="trailing" secondItem="rD7-xF-jfC" secondAttribute="trailing" constant="23.5" id="stC-2G-YPP"/>
+                            <constraint firstItem="J2U-Um-0qZ" firstAttribute="trailing" secondItem="rD7-xF-jfC" secondAttribute="trailing" constant="30" id="stC-2G-YPP"/>
                             <constraint firstItem="oZo-wJ-abq" firstAttribute="centerX" secondItem="J2U-Um-0qZ" secondAttribute="centerX" id="tfM-df-aMw"/>
                             <constraint firstItem="oZo-wJ-abq" firstAttribute="top" secondItem="qMN-qe-MNO" secondAttribute="bottom" constant="29" id="whq-K9-YZf"/>
                         </constraints>

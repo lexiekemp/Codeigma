@@ -49,7 +49,7 @@ class ResultViewController: UIViewController {
             titleLabel.text = "Oops!"
             detailsLabel.text = "We weren't able to identify your codes!"
             instructionsLabel.isHidden = false
-            recropButton.isHidden = false
+            //recropButton.isHidden = false
             nextStepButton.setTitle("Retake Photo", for: .normal)
         }
         // Do any additional setup after loading the view.

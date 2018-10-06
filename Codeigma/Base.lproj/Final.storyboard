@@ -169,11 +169,20 @@
                         <outlet property="recropButton" destination="PuU-a2-yFE" id="m9G-qI-Mau"/>
                         <outlet property="titleLabel" destination="BCh-vH-guh" id="4en-dz-9o3"/>
                         <segue destination="STL-zw-xki" kind="show" identifier="goToChecklist" id="tOR-mu-0Uk"/>
+                        <segue destination="ZbS-ID-3fa" kind="show" identifier="goToTakePhoto" id="zWA-mV-KUO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khz-QD-xs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1944.8" y="5.8470764617691158"/>
+        </scene>
+        <!--Page3-->
+        <scene sceneID="zuL-hc-dmG">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Page3" id="ZbS-ID-3fa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k0b-lW-hC4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1945" y="501"/>
         </scene>
         <!--Checklist-->
         <scene sceneID="Gn9-kk-kMd">
@@ -184,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yb-Yp-9up">
-                                <rect key="frame" x="0.0" y="20" width="375" height="483"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="527"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="codeCell" rowHeight="183" id="xtI-eG-MvQ" customClass="CodeTableViewCell" customModule="Codeigma" customModuleProvider="target">
@@ -296,7 +305,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-YQ-ENZ">
-                                <rect key="frame" x="50" y="563" width="275" height="40"/>
+                                <rect key="frame" x="50" y="607" width="275" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="3nh-hT-Nep"/>
@@ -306,7 +315,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPI-ba-Vzy">
-                                <rect key="frame" x="50" y="513" width="275" height="40"/>
+                                <rect key="frame" x="50" y="557" width="275" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="BMM-rh-zSm"/>
@@ -546,6 +555,6 @@
         <image name="plus" width="68" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hut-ZZ-LTb"/>
+        <segue reference="tOR-mu-0Uk"/>
     </inferredMetricsTieBreakers>
 </document>

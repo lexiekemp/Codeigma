@@ -68,32 +68,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_york" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-Yj-ce4">
-                                <rect key="frame" x="0.0" y="20" width="375" height="561"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="561" id="n58-ct-efP"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-ge-M33">
-                                <rect key="frame" x="170" y="617" width="54" height="30"/>
+                                <rect key="frame" x="170" y="622" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="openCameraButtonWithSender:" destination="Ocm-3D-tl3" eventType="touchUpInside" id="dgW-jf-wN2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl0-Z3-Uee">
+                                <rect key="frame" x="297" y="622" width="34" height="30"/>
+                                <state key="normal" title="Crop"/>
+                                <connections>
+                                    <action selector="crop:" destination="Ocm-3D-tl3" eventType="touchUpInside" id="aBi-Qi-Z6U"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQU-Ev-zoe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_york" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-Yj-ce4">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="centerY" secondItem="yQU-Ev-zoe" secondAttribute="centerY" id="0bz-nA-iFZ"/>
+                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="centerX" secondItem="yQU-Ev-zoe" secondAttribute="centerX" id="6f9-ZZ-hND"/>
+                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="leading" secondItem="yQU-Ev-zoe" secondAttribute="leading" id="MXP-wy-XBT"/>
+                                    <constraint firstAttribute="trailing" secondItem="bLX-Yj-ce4" secondAttribute="trailing" id="RH7-Yv-FaY"/>
+                                    <constraint firstAttribute="bottom" secondItem="bLX-Yj-ce4" secondAttribute="bottom" id="WgV-vF-9uP"/>
+                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="top" secondItem="yQU-Ev-zoe" secondAttribute="top" id="ocZ-hD-rhr"/>
+                                </constraints>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUj-pn-xlN" customClass="CropAreaView" customModule="Codeigma" customModuleProvider="target">
+                                <rect key="frame" x="100" y="80" width="175" height="507"/>
+                                <color key="backgroundColor" red="1" green="0.99040098716342406" blue="0.28526221866997981" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WUj-pn-xlN" secondAttribute="height" multiplier="175:507" id="V5P-kG-xHK"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="bLX-Yj-ce4" secondAttribute="trailing" id="4ig-QG-TMy"/>
-                            <constraint firstItem="HmE-ge-M33" firstAttribute="top" secondItem="bLX-Yj-ce4" secondAttribute="bottom" constant="36" id="EqD-ff-ge5"/>
-                            <constraint firstItem="bLX-Yj-ce4" firstAttribute="top" secondItem="XoX-52-DJX" secondAttribute="top" id="M2j-XB-7dt"/>
+                            <constraint firstItem="HmE-ge-M33" firstAttribute="bottom" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="35" id="6gn-VE-Jh2"/>
+                            <constraint firstItem="gl0-Z3-Uee" firstAttribute="centerY" secondItem="HmE-ge-M33" secondAttribute="centerY" id="AE3-3U-255"/>
+                            <constraint firstItem="WUj-pn-xlN" firstAttribute="top" secondItem="XoX-52-DJX" secondAttribute="top" constant="60" id="If5-Wx-9Dk"/>
                             <constraint firstItem="HmE-ge-M33" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="170" id="MQK-CO-JEJ"/>
-                            <constraint firstItem="bLX-Yj-ce4" firstAttribute="leading" secondItem="ZzA-Rm-oYM" secondAttribute="leading" id="dI1-86-9s0"/>
+                            <constraint firstItem="XoX-52-DJX" firstAttribute="bottom" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="50" id="PQk-ai-kyq"/>
+                            <constraint firstItem="yQU-Ev-zoe" firstAttribute="top" secondItem="XoX-52-DJX" secondAttribute="top" id="Q5V-T7-Sxu"/>
+                            <constraint firstItem="WUj-pn-xlN" firstAttribute="centerX" secondItem="yQU-Ev-zoe" secondAttribute="centerX" id="Vre-Nv-dv8"/>
+                            <constraint firstItem="WUj-pn-xlN" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="100" id="Z9K-nW-Lic"/>
+                            <constraint firstItem="XoX-52-DJX" firstAttribute="trailing" secondItem="yQU-Ev-zoe" secondAttribute="trailing" id="bhl-N2-Xei"/>
+                            <constraint firstItem="XoX-52-DJX" firstAttribute="trailing" secondItem="gl0-Z3-Uee" secondAttribute="trailing" constant="44" id="n7i-xk-kIz"/>
+                            <constraint firstItem="yQU-Ev-zoe" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" id="upS-Ab-OTt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XoX-52-DJX"/>
                     </view>
                     <connections>
+                        <outlet property="cropAreaView" destination="WUj-pn-xlN" id="ptj-8B-TCW"/>
                         <outlet property="imagePicked" destination="bLX-Yj-ce4" id="mvO-SE-R0K"/>
+                        <outlet property="scrollView" destination="yQU-Ev-zoe" id="Hkk-kR-qRP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bg2-9Y-mL1" userLabel="First Responder" sceneMemberID="firstResponder"/>

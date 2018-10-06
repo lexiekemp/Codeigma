@@ -13,7 +13,6 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
 
     @IBOutlet weak var checkListTableView: UITableView!
     @IBOutlet weak var callNumberButton: UIButton!
-    
     @IBOutlet weak var doneButton: UIButton!
     var bill: Bill!
     var codes = [Code]()
@@ -26,6 +25,20 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
         doneButton.layer.cornerRadius = doneButton.frame.height/2
         
         // Do any additional setup after loading the view.
+        let gradientLayer = CAGradientLayer()
+
+        gradientLayer.frame = self.view.bounds
+
+        //gradientLayer.colors = [UIColor.red.cgColor, codeigmaLightBlue.cgColor]
+        gradientLayer.colors = [codeigmaDarkBlue.cgColor, codeigmaLightBlue.cgColor]
+
+        gradientLayer.locations = [0.0, 1.0]
+
+        let container = UIView()
+
+        container.layer.addSublayer(gradientLayer)
+        self.view.addSubview(container)
+        self.view.sendSubviewToBack(container)
     }
 
     @IBAction func doneClicked(_ sender: UIButton) {

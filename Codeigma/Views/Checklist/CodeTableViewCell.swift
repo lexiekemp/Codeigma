@@ -11,6 +11,7 @@ import CoreData
 
 class CodeTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var codeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var correctButton: UIButton!
@@ -51,6 +52,7 @@ class CodeTableViewCell: UITableViewCell {
 
     func inflate(code: Code) {
         self.code = code
+        codeLabel.text = code.code
         titleLabel.text = code.title
         detailLabel.text = code.detail
         switch code.evaluation {

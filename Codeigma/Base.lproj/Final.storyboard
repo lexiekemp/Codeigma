@@ -27,25 +27,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="weq-XF-XoB">
-                                <rect key="frame" x="166.5" y="283" width="42" height="36"/>
+                                <rect key="frame" x="166.5" y="282.5" width="42" height="36"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codeigma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-hF-uaD">
-                                <rect key="frame" x="114.5" y="209" width="146" height="39"/>
+                                <rect key="frame" x="114.5" y="209" width="146" height="38.5"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for your code!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqa-jW-GCn">
-                                <rect key="frame" x="106" y="346" width="163" height="20"/>
+                                <rect key="frame" x="106.5" y="345.5" width="162.5" height="19"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="LpH-FC-MEx">
-                                <rect key="frame" x="112.5" y="329" width="150" height="2"/>
+                                <rect key="frame" x="112.5" y="328.5" width="150" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="3C9-da-HbB"/>
                                 </constraints>
@@ -207,22 +207,22 @@
                                                     <rect key="frame" x="30" y="10" width="315" height="163"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5h1-yj-0L6">
-                                                            <rect key="frame" x="15" y="10" width="285" height="83"/>
+                                                            <rect key="frame" x="15" y="10" width="285" height="101"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CPT Code" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wVM-k5-KUG">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="69.5" height="19.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="69.5" height="25"/>
                                                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpW-LN-3Zo" userLabel="Title">
-                                                                    <rect key="frame" x="0.0" y="29.5" width="46" height="24"/>
-                                                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
+                                                                    <rect key="frame" x="0.0" y="35" width="37" height="25"/>
+                                                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4C0-Jy-zzW" userLabel="Detail">
-                                                                    <rect key="frame" x="0.0" y="63.5" width="37" height="19.5"/>
+                                                                    <rect key="frame" x="0.0" y="70" width="37" height="31"/>
                                                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -272,7 +272,7 @@
                                                     <constraints>
                                                         <constraint firstItem="Ubd-Ji-7M4" firstAttribute="leading" secondItem="200-my-B9N" secondAttribute="leading" id="06d-CK-erJ"/>
                                                         <constraint firstItem="WLJ-gM-cxR" firstAttribute="bottom" secondItem="200-my-B9N" secondAttribute="bottom" id="9H4-Kc-hdI"/>
-                                                        <constraint firstItem="200-my-B9N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5h1-yj-0L6" secondAttribute="bottom" constant="10" id="IyN-Cf-F3x"/>
+                                                        <constraint firstItem="200-my-B9N" firstAttribute="top" secondItem="5h1-yj-0L6" secondAttribute="bottom" constant="10" id="IyN-Cf-F3x"/>
                                                         <constraint firstItem="Ubd-Ji-7M4" firstAttribute="top" secondItem="200-my-B9N" secondAttribute="top" id="KkB-bV-zxX"/>
                                                         <constraint firstItem="WLJ-gM-cxR" firstAttribute="top" secondItem="200-my-B9N" secondAttribute="top" id="LdV-YI-rxi"/>
                                                         <constraint firstAttribute="bottom" secondItem="200-my-B9N" secondAttribute="bottom" id="Okn-7T-yFM"/>
@@ -296,6 +296,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="cellBackgroundView" destination="ECa-Gn-yfS" id="tQ1-XO-u5Y"/>
+                                            <outlet property="codeLabel" destination="wVM-k5-KUG" id="QbJ-Bh-CKx"/>
                                             <outlet property="correctButton" destination="V5B-2f-gTY" id="mPH-ft-1Lq"/>
                                             <outlet property="detailLabel" destination="4C0-Jy-zzW" id="9rQ-GB-otQ"/>
                                             <outlet property="incorrectButton" destination="vSv-tq-hrj" id="AgU-cC-FLR"/>
@@ -558,12 +559,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="checkmark-green" width="17" height="14"/>
+        <image name="checkmark-green" width="17.5" height="14.5"/>
         <image name="cross-red" width="14" height="14"/>
         <image name="icon" width="69" height="54"/>
         <image name="plus" width="68" height="68"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="5UC-3W-BHL"/>
         <segue reference="hut-ZZ-LTb"/>
     </inferredMetricsTieBreakers>
 </document>

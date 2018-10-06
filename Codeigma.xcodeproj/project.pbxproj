@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A13C6174CA3406DE2727601 /* Pods_Codeigma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */; };
+		CCAC2E832169699200611E0F /* GradientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCAC2E822169699200611E0F /* GradientViewController.swift */; };
 		E928A84221692E85008E46DC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84121692E85008E46DC /* RoundedView.swift */; };
 		E928A855216955BD008E46DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84E216955B8008E46DC /* ViewController.swift */; };
 		E928A856216955BD008E46DC /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84F216955B9008E46DC /* ImageCropperViewController.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Codeigma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCAC2E822169699200611E0F /* GradientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientViewController.swift; sourceTree = "<group>"; };
 		E928A84121692E85008E46DC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		E928A84E216955B8008E46DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E928A84F216955B9008E46DC /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				E928A854216955BC008E46DC /* Constants.swift */,
 				E928A851216955BB008E46DC /* CropAreaView.swift */,
 				E928A84F216955B9008E46DC /* ImageCropperViewController.swift */,
+				CCAC2E822169699200611E0F /* GradientViewController.swift */,
 				E928A852216955BB008E46DC /* Page3ViewController.swift */,
 				E928A850216955BA008E46DC /* SegueFromRight.swift */,
 				E928A84E216955B8008E46DC /* ViewController.swift */,
@@ -290,7 +293,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Codeigma/Pods-Codeigma-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
@@ -303,7 +306,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Codeigma/Pods-Codeigma-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -325,6 +328,7 @@
 				E9EFD9D621686B2C00EB39A4 /* DashboardViewController.swift in Sources */,
 				E928A84221692E85008E46DC /* RoundedView.swift in Sources */,
 				E9EFD9D421686B1300EB39A4 /* ChecklistViewController.swift in Sources */,
+				CCAC2E832169699200611E0F /* GradientViewController.swift in Sources */,
 				E928A857216955BD008E46DC /* SegueFromRight.swift in Sources */,
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
 				E928A859216955BD008E46DC /* Page3ViewController.swift in Sources */,
@@ -489,7 +493,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M4PHT7QB8F;
+				DEVELOPMENT_TEAM = CE3VTACW36;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Codeigma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
@@ -510,7 +514,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M4PHT7QB8F;
+				DEVELOPMENT_TEAM = CE3VTACW36;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Codeigma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;

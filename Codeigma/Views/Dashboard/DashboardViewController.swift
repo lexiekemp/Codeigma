@@ -35,6 +35,21 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         billTableView.refreshControl = refreshControl
         //refreshControl.addTarget(self, action: #selector(refreshTable(_:)), for: .valueChanged)
         // Do any additional setup after loading the view.
+
+        let gradientLayer = CAGradientLayer()
+
+        gradientLayer.frame = self.view.bounds
+
+        //gradientLayer.colors = [UIColor.red.cgColor, codeigmaLightBlue.cgColor]
+        gradientLayer.colors = [codeigmaDarkBlue.cgColor, codeigmaLightBlue.cgColor]
+
+        gradientLayer.locations = [0.0, 1.0]
+
+        let container = UIView()
+
+        container.layer.addSublayer(gradientLayer)
+        self.view.addSubview(container)
+        self.view.sendSubviewToBack(container)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

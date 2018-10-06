@@ -7,16 +7,32 @@
 //
 
 import UIKit
+import TesseractOCR
 
-class LoadingViewController: UIViewController {
+class LoadingViewController: UIViewController, G8TesseractDelegate {
     
     @IBOutlet weak var percentageLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     
+    var codeImage: UIImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        if let tesseract = G8Tesseract(language: "eng") {
+            tesseract.delegate = self
+            tesseract.image = codeImage.g8_blackAndWhite()
+            tesseract.recognize()
+            translateCodes(tesseract.recognizedText)
+        }
         // Do any additional setup after loading the view.
+    }
+    
+    func progressImageRecognition(for tesseract: G8Tesseract!) {
+        progressView.progress = Float(tesseract.progress)
+    }
+    
+    func translateCodes(_ codeList: String) {
+        
     }
     
 

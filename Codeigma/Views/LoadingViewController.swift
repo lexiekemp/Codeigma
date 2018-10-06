@@ -8,6 +8,7 @@
 
 import UIKit
 import TesseractOCR
+import Alamofire
 
 class LoadingViewController: UIViewController, G8TesseractDelegate {
     

@@ -45,7 +45,7 @@ public class Code: NSManagedObject {
         }
         return nil
     }
-    class func updateEval(code: Code, eval: Int64) -> Bool {
+    class func updateEval(code: Code, eval: Int64) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         code.setValue(eval, forKey: "evaluation")
@@ -53,8 +53,6 @@ public class Code: NSManagedObject {
             try context.save()
         } catch {
             print("Failed saving")
-            return false
         }
-        return true
     }
 }

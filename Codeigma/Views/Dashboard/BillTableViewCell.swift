@@ -19,6 +19,7 @@ class BillTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        openButton.layer.cornerRadius = 30.0
         // Initialization code
     }
 

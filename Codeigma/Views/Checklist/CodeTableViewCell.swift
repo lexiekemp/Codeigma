@@ -15,6 +15,7 @@ class CodeTableViewCell: UITableViewCell {
     @IBOutlet weak var detailLabel: UILabel!
     @IBOutlet weak var correctButton: UIButton!
     @IBOutlet weak var incorrectButton: UIButton!
+    @IBOutlet weak var cellBackgroundView: UIView!
     
     var code: Code?
     
@@ -24,6 +25,7 @@ class CodeTableViewCell: UITableViewCell {
         if code != nil {
             Code.updateEval(code: code!, eval: Eval.correct.rawValue)
         }
+        cellBackgroundView.layer.cornerRadius = 10.0
     }
     @IBAction func incorrectButtonClicked(_ sender: UIButton) {
         correctButton.isEnabled = true

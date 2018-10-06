@@ -14,8 +14,9 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var checkListTableView: UITableView!
     var managedObjectContext: NSManagedObjectContext?
     
-    var parentBill: Bill!
-    
+    var bill: Bill!
+    var codes = [Code]()
+    /*
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>? {
         didSet {
             do {
@@ -29,7 +30,7 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
             }
         }
     }
-    
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         checkListTableView.delegate = self
@@ -41,11 +42,16 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidAppear(animated)
         updateTable()
     }
-    
+    func updateTable() {
+        if let newCodes = bill.codes?.allObjects as? [Code] {
+            self.codes = newCodes
+        }
+    }
+    /*
     func updateTable() {
         if let context = managedObjectContext {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Code")
-            request.predicate = NSPredicate(format: "bill = %@", parentBill)
+            request.predicate = NSPredicate(format: "bill = %@", bill)
             request.sortDescriptors = [NSSortDescriptor(key: "correct", ascending: true)]
             fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         }
@@ -53,26 +59,28 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
             fetchedResultsController = nil
         }
     }
-
+*/
     // MARK: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let sections = fetchedResultsController?.sections, sections.count > 0 {
+        /*if let sections = fetchedResultsController?.sections, sections.count > 0 {
             return sections[section].numberOfObjects
         } else {
             return 0
-        }
+        }*/
+        return codes.count
     }
     
     // MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "codeCell", for: indexPath) as! CodeTableViewCell
-        if let code = fetchedResultsController?.object(at: indexPath) as? Code {
-            cell.inflate(code: code)
-        }
+        //if let code = fetchedResultsController?.object(at: indexPath) as? Code {
+        let code = codes[indexPath.row]
+        cell.inflate(code: code)
+
         return cell
     }
     /*

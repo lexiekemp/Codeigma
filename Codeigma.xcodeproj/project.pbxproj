@@ -24,6 +24,8 @@
 		E9EFD9EE2168775F00EB39A4 /* Bill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9EA2168775F00EB39A4 /* Bill+CoreDataProperties.swift */; };
 		E9EFD9F221687C1400EB39A4 /* Code+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9F021687C1400EB39A4 /* Code+CoreDataProperties.swift */; };
 		E9EFD9F42168913E00EB39A4 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9F32168913D00EB39A4 /* tessdata */; };
+		E9EFD9F62168936B00EB39A4 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9F52168936B00EB39A4 /* SF-Pro-Display-Regular.otf */; };
+		E9EFD9F82168938300EB39A4 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9F72168938200EB39A4 /* SF-Pro-Display-Semibold.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		E9EFD9EA2168775F00EB39A4 /* Bill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E9EFD9F021687C1400EB39A4 /* Code+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E9EFD9F32168913D00EB39A4 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		E9EFD9F52168936B00EB39A4 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		E9EFD9F72168938200EB39A4 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		F0E7D9DD1007C3E937D6822E /* Pods-Codeigma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codeigma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma.debug.xcconfig"; sourceTree = "<group>"; };
 		FAB4DC3A880523ADB954B866 /* Pods-Codeigma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codeigma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +106,7 @@
 			children = (
 				E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */,
 				E9EFD9BE216860EF00EB39A4 /* Main.storyboard */,
+				E9EFD9F9216893A200EB39A4 /* Fonts */,
 				E9EFD9F32168913D00EB39A4 /* tessdata */,
 				E9EFD9E6216876DB00EB39A4 /* Core Data */,
 				E9EFD9D721686B3400EB39A4 /* Views */,
@@ -151,6 +156,15 @@
 				E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		E9EFD9F9216893A200EB39A4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD9F52168936B00EB39A4 /* SF-Pro-Display-Regular.otf */,
+				E9EFD9F72168938200EB39A4 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,9 +227,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EFD9F82168938300EB39A4 /* SF-Pro-Display-Semibold.otf in Resources */,
 				E9EFD9C82168610100EB39A4 /* LaunchScreen.storyboard in Resources */,
 				E9EFD9F42168913E00EB39A4 /* tessdata in Resources */,
 				E9EFD9C52168610100EB39A4 /* Assets.xcassets in Resources */,
+				E9EFD9F62168936B00EB39A4 /* SF-Pro-Display-Regular.otf in Resources */,
 				E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

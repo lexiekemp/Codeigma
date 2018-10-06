@@ -25,6 +25,8 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
             tesseract.delegate = self
             tesseract.image = codeImage.g8_blackAndWhite()
             tesseract.recognize()
+            progressView.setProgress(1.0, animated: true)
+            percentageLabel.text = "100%"
             translateCodes(tesseract.recognizedText) { bill in
                 self.performSegue(withIdentifier: "goToResult", sender: bill)
             }
@@ -33,7 +35,8 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
     }
     
     func progressImageRecognition(for tesseract: G8Tesseract!) {
-        progressView.progress = Float(tesseract.progress)
+        progressView.setProgress(Float(tesseract.progress)/100, animated: true)
+        percentageLabel.text = "\(Int(tesseract.progress))%"
     }
     
     func translateCodes(_ codeList: String, completion: @escaping (Bill?) -> ()) {

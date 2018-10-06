@@ -56,13 +56,19 @@ class CodeTableViewCell: UITableViewCell {
         switch code.evaluation {
         case Eval.correct.rawValue:
             correctButton.isEnabled = false
+            correctButton.setImage(UIImage(named: "checkmark-gray"), for: .normal)
             incorrectButton.isEnabled = true
+            incorrectButton.setImage(UIImage(named: "cross-red"), for: .normal)
         case Eval.incorrect.rawValue:
             correctButton.isEnabled = true
+            correctButton.setImage(UIImage(named: "checkmark-green"), for: .normal)
             incorrectButton.isEnabled = false
+            incorrectButton.setImage(UIImage(named: "cross-gray"), for: .normal)
         default:
             correctButton.isEnabled = true
+            correctButton.setImage(UIImage(named: "checkmark-green"), for: .normal)
             incorrectButton.isEnabled = true
+            incorrectButton.setImage(UIImage(named: "cross-red"), for: .normal)
         }
     }
 }

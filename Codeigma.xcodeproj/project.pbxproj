@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7A13C6174CA3406DE2727601 /* Pods_Codeigma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */; };
+		E928A84221692E85008E46DC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84121692E85008E46DC /* RoundedView.swift */; };
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
 		E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Main.storyboard */; };
 		E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Codeigma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E928A84121692E85008E46DC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		E9EFD9D721686B3400EB39A4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E928A84121692E85008E46DC /* RoundedView.swift */,
 				E9EFD9DC21686F2400EB39A4 /* Dashboard */,
 				E9EFD9DD21686F3000EB39A4 /* Checklist */,
 				E9EFD9D1216869CE00EB39A4 /* ResultViewController.swift */,
@@ -293,6 +296,7 @@
 				E9EFD9F221687C1400EB39A4 /* Code+CoreDataProperties.swift in Sources */,
 				E9EFD9D2216869CE00EB39A4 /* ResultViewController.swift in Sources */,
 				E9EFD9D621686B2C00EB39A4 /* DashboardViewController.swift in Sources */,
+				E928A84221692E85008E46DC /* RoundedView.swift in Sources */,
 				E9EFD9D421686B1300EB39A4 /* ChecklistViewController.swift in Sources */,
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
 				E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */,

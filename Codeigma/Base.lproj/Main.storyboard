@@ -348,10 +348,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BE1-fo-RyE">
                                                     <rect key="frame" x="30" y="10" width="315" height="231"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CZ-Pe-JAj">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6CZ-Pe-JAj" customClass="RoundedView" customModule="Codeigma" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill - " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymq-au-6Fa">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ymq-au-6Fa">
                                                                     <rect key="frame" x="25" y="13" width="265" height="24"/>
                                                                     <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="20"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -366,29 +366,29 @@
                                                                 <constraint firstAttribute="trailing" secondItem="Ymq-au-6Fa" secondAttribute="trailing" constant="25" id="wYy-t4-1pw"/>
                                                             </constraints>
                                                         </view>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8L-Gw-y9i">
-                                                            <rect key="frame" x="15" y="70" width="120" height="55.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="i8L-Gw-y9i">
+                                                            <rect key="frame" x="15" y="70" width="100" height="55.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ff2-RQ-xW2">
-                                                                    <rect key="frame" x="49.5" y="0.0" width="21.5" height="38.5"/>
+                                                                    <rect key="frame" x="39.5" y="0.0" width="21.5" height="38.5"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Codes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-eF-xaf">
-                                                                    <rect key="frame" x="21.5" y="38.5" width="77" height="17"/>
+                                                                    <rect key="frame" x="11.5" y="38.5" width="77" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="120" id="75q-Wa-yEP"/>
+                                                                <constraint firstAttribute="width" constant="100" id="75q-Wa-yEP"/>
                                                                 <constraint firstAttribute="height" constant="55.5" id="bRj-3c-2u1"/>
                                                             </constraints>
                                                         </stackView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ors-Vt-PWC" userLabel="Separator Bar">
-                                                            <rect key="frame" x="145" y="83" width="1" height="30"/>
+                                                            <rect key="frame" x="125" y="83" width="1" height="30"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="1" id="tOm-Ji-eGr"/>
@@ -396,7 +396,7 @@
                                                             </constraints>
                                                         </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KWu-MW-X8K">
-                                                            <rect key="frame" x="156" y="70" width="65" height="55.5"/>
+                                                            <rect key="frame" x="136" y="70" width="65" height="55.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEx-E3-vPt">
                                                                     <rect key="frame" x="22" y="0.0" width="21.5" height="38.5"/>
@@ -444,6 +444,9 @@
                                                             <state key="normal" title="Open">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="openChecklist:" destination="DG6-Zq-q3M" eventType="touchUpInside" id="2hI-Cn-C5w"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -479,6 +482,7 @@
                                             <outlet property="correctCodesLabel" destination="bnK-pX-pwX" id="FGZ-4o-9SW"/>
                                             <outlet property="incorrectCodesLabel" destination="UEx-E3-vPt" id="tQi-S0-Kvc"/>
                                             <outlet property="openButton" destination="gVt-T1-WjZ" id="EiS-Ku-IaI"/>
+                                            <outlet property="titleBackgroundView" destination="6CZ-Pe-JAj" id="eVT-1q-VRs"/>
                                             <outlet property="titleLabel" destination="Ymq-au-6Fa" id="ZFS-sX-Dld"/>
                                             <outlet property="totalCodesLabel" destination="ff2-RQ-xW2" id="eRI-ZO-Mod"/>
                                         </connections>

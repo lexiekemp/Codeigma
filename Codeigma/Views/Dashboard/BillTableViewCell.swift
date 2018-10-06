@@ -16,6 +16,7 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var correctCodesLabel: UILabel!
     @IBOutlet weak var incorrectCodesLabel: UILabel!
     @IBOutlet weak var cellBackgroundView: UIView!
+    @IBOutlet weak var titleBackgroundView: UIView!
     
     @IBOutlet weak var openButton: UIButton!
     
@@ -23,13 +24,16 @@ class BillTableViewCell: UITableViewCell {
         super.awakeFromNib()
         openButton.layer.cornerRadius = openButton.frame.height/2
         cellBackgroundView.layer.cornerRadius = 10.0
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func openChecklist(_ sender: UIButton) {
+        
     }
     
     func inflate(bill: Bill) {
@@ -63,5 +67,4 @@ class BillTableViewCell: UITableViewCell {
             }
         }
     }
-
 }

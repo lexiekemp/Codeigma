@@ -13,7 +13,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var billTableView: UITableView!
     private let refreshControl = UIRefreshControl()
-    var managedObjectContext: NSManagedObjectContext?
     
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>? {
         didSet {
@@ -45,14 +44,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func addBill(_ sender: UIButton) {
     }
     func updateTable() {
-        if let context = managedObjectContext {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Bill")
-            request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        }
-        else {
-            fetchedResultsController = nil
-        }
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Bill")
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
     }
     
     // MARK: UITableViewDataSource
@@ -68,9 +63,14 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 220
+    }
+    
     // MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillTableViewCell
+        cell.selectionStyle = .none;
         if let bill = fetchedResultsController?.object(at: indexPath) as? Bill {
             cell.inflate(bill: bill)
         }

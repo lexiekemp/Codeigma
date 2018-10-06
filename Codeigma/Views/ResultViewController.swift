@@ -38,8 +38,8 @@ class ResultViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        nextStepButton.layer.cornerRadius = 30.0
-        recropButton.layer.cornerRadius = 30.0
+        nextStepButton.layer.cornerRadius = nextStepButton.frame.height/2
+        recropButton.layer.cornerRadius = recropButton.frame.height/2
         if bill != nil {
             titleLabel.text = "Great News!"
             detailsLabel.text = "We've found your codes!"

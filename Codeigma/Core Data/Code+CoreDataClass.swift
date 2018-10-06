@@ -49,8 +49,8 @@ public class Code: NSManagedObject {
     
     class func addCodeFromJSON(bill: Bill, jsonTuple data: (String, JSON)) -> Code? {
         guard let codeString = data.1["code"].string else { return nil }
-        guard let title = data.1["shortdescription"].string else { return nil }
-        guard let detail = data.1["longdescription"].string else { return nil }
+        guard let title = data.1["shortDescription"].string else { return nil }
+        guard let detail = data.1["longDescription"].string else { return nil }
         return addCode(bill: bill, codeString: codeString, title: title, detail: detail)
     }
     

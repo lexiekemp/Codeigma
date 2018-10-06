@@ -21,7 +21,7 @@ class BillTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        openButton.layer.cornerRadius = 30.0
+        openButton.layer.cornerRadius = openButton.frame.height/2
         cellBackgroundView.layer.cornerRadius = 10.0
         // Initialization code
     }
@@ -33,7 +33,35 @@ class BillTableViewCell: UITableViewCell {
     }
     
     func inflate(bill: Bill) {
-        
+        if bill.date != nil {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MMMM dd, yyyy"
+            let creationDate = bill.date! as Date
+            titleLabel.text = "Bill - \(dateFormatter.string(from: creationDate))"
+        }
+        else {
+            titleLabel.text = "Bill"
+        }
+        totalCodesLabel.text = "0"
+        correctCodesLabel.text = "0"
+        incorrectCodesLabel.text = "0"
+        if bill.codes != nil, bill.codes!.count > 0 {
+            if let codes = bill.codes!.allObjects as? [Code] {
+                totalCodesLabel.text = String(codes.count)
+                var correctCount = 0
+                var incorrectCount = 0
+                for code in codes {
+                    if code.evaluation == Eval.correct.rawValue {
+                        correctCount += 1
+                    }
+                    else if code.evaluation == Eval.incorrect.rawValue {
+                        incorrectCount += 1
+                    }
+                }
+                correctCodesLabel.text = String(correctCount)
+                incorrectCodesLabel.text = String(incorrectCount)
+            }
+        }
     }
 
 }

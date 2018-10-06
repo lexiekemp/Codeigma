@@ -20,6 +20,7 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        codeImage = UIImage(named: "bill1")
         if let tesseract = G8Tesseract(language: "eng") {
             tesseract.delegate = self
             tesseract.image = codeImage.g8_blackAndWhite()
@@ -38,17 +39,33 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
     func translateCodes(_ codeList: String, completion: @escaping (Bill?) -> ()) {
         let codes = codeList.components(separatedBy: .whitespacesAndNewlines)
         var codesdict = [String: String]()
-        if codesdict.count == 0 { completion(nil) }
         for i in 0..<codes.count {
-            codesdict[String(i)] = codes[i]
+            if codes[i].count > 0 {
+                codesdict[String(i)] = codes[i]
+            }
+        }
+        if codesdict.count == 0 {
+            completion(nil)
+            return
         }
         let parameters: [String: AnyObject] = [
             "codes" : (codesdict as AnyObject)
         ]
         
-        Alamofire.request("https://71ba8e65.ngrok.io/code", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+        Alamofire.request("https://codigma.herokuapp.com/code", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             print(response)
-            let json = JSON(response)
+            var json:JSON
+            if let data = response.result.value {
+                json = JSON(data)
+                if json.count == 0 {
+                    completion(nil)
+                    return
+                }
+            }
+            else {
+                completion(nil)
+                return
+            }
             guard let newBill = Bill.addBill() else {
                 completion(nil)
                 return

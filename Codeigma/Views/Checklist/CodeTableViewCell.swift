@@ -25,7 +25,6 @@ class CodeTableViewCell: UITableViewCell {
         if code != nil {
             Code.updateEval(code: code!, eval: Eval.correct.rawValue)
         }
-        cellBackgroundView.layer.cornerRadius = 10.0
     }
     @IBAction func incorrectButtonClicked(_ sender: UIButton) {
         correctButton.isEnabled = true
@@ -36,6 +35,7 @@ class CodeTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        cellBackgroundView.layer.cornerRadius = 10.0
         // Initialization code
     }
 

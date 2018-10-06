@@ -9,38 +9,32 @@
 import UIKit
 import CoreData
 
-class ChecklistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
+class ChecklistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var checkListTableView: UITableView!
     @IBOutlet weak var callNumberButton: UIButton!
     
-    var managedObjectContext: NSManagedObjectContext?
-    
     var bill: Bill!
     var codes = [Code]()
-    /*
-    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>? {
-        didSet {
-            do {
-                if let frc = fetchedResultsController {
-                    frc.delegate = self
-                    try frc.performFetch()
-                }
-                checkListTableView.reloadData()
-            } catch let error {
-                print("NSFetchedResultsController.performFetch() failed: \(error)")
-            }
-        }
-    }
-    */
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         checkListTableView.delegate = self
         checkListTableView.dataSource = self
-        callNumberButton.layer.cornerRadius = 30.0
+        callNumberButton.layer.cornerRadius = callNumberButton.frame.height/2
+        
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneClicked(_:)))
+        if self.navigationController == nil {
+            print("nil")
+        }
+        callNumberButton.addTarget(self, action: #selector(doneClicked(_:)), for: .touchUpInside)
+        self.navigationController?.navigationItem.rightBarButtonItem = doneButton
         // Do any additional setup after loading the view.
     }
     
+    @objc func doneClicked(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToDashboard", sender: nil)
+    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         updateTable()
@@ -48,39 +42,27 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
     func updateTable() {
         if let newCodes = bill.codes?.allObjects as? [Code] {
             self.codes = newCodes
+            self.checkListTableView.reloadData()
         }
     }
-    /*
-    func updateTable() {
-        if let context = managedObjectContext {
-            let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Code")
-            request.predicate = NSPredicate(format: "bill = %@", bill)
-            request.sortDescriptors = [NSSortDescriptor(key: "correct", ascending: true)]
-            fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-        }
-        else {
-            fetchedResultsController = nil
-        }
-    }
-*/
+    
     // MARK: UITableViewDataSource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        /*if let sections = fetchedResultsController?.sections, sections.count > 0 {
-            return sections[section].numberOfObjects
-        } else {
-            return 0
-        }*/
         return codes.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 220
     }
     
     // MARK: UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "codeCell", for: indexPath) as! CodeTableViewCell
-        //if let code = fetchedResultsController?.object(at: indexPath) as? Code {
+        cell.selectionStyle = .none;
         let code = codes[indexPath.row]
         cell.inflate(code: code)
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3347A5216910C9004445CF /* CropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3347A4216910C9004445CF /* CropAreaView.swift */; };
 		CC559E592168729E0049042B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC559E572168729D0049042B /* LaunchScreen.storyboard */; };
 		CC559E5B2168732D0049042B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC559E5A2168732D0049042B /* Constants.swift */; };
 		CCD2F9C72168900C00AB92F7 /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2F9C62168900C00AB92F7 /* ImageCropperViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3347A4216910C9004445CF /* CropAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropAreaView.swift; sourceTree = "<group>"; };
 		CC559E582168729D0049042B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC559E5A2168732D0049042B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CCD2F7252168856400AB92F7 /* Codeigma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Codeigma-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				E9EFD9C92168610200EB39A4 /* Info.plist */,
 				CCD2F9C62168900C00AB92F7 /* ImageCropperViewController.swift */,
 				E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */,
+				CC3347A4216910C9004445CF /* CropAreaView.swift */,
 				CCD2F7252168856400AB92F7 /* Codeigma-Bridging-Header.h */,
 			);
 			path = Codeigma;
@@ -152,6 +155,7 @@
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
 				E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */,
 				CC559E5B2168732D0049042B /* Constants.swift in Sources */,
+				CC3347A5216910C9004445CF /* CropAreaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

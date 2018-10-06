@@ -11,12 +11,13 @@ import UIKit
 class ImageCropperViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate {
     @IBOutlet weak var imagePicked: UIImageView!
     @IBOutlet weak var cropAreaView: CropAreaView!
+//    @IBOutlet weak var cropScrollView: UIScrollView!
 
-    @IBOutlet var scrollView: UIScrollView!{
+    @IBOutlet var imageScrollView: UIScrollView!{
         didSet{
-            scrollView.delegate = self
-            scrollView.minimumZoomScale = 1.0
-            scrollView.maximumZoomScale = 10.0
+            imageScrollView.delegate = self
+            imageScrollView.minimumZoomScale = 1.0
+            imageScrollView.maximumZoomScale = 10.0
         }
     }
 
@@ -29,12 +30,28 @@ class ImageCropperViewController: UIViewController, UIImagePickerControllerDeleg
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
+    @IBAction func confirmZoom(_ sender: Any) {
+        imageScrollView.isUserInteractionEnabled = false
+
+        //imageScrollView.pinchGestureRecognizer?.isEnabled = false
+        //imageScrollView.panGestureRecognizer.isEnabled = false
+
+//        cropScrollView.isHidden = false
+//        cropScrollView.isExclusiveTouch = true
+//        cropScrollView.delegate = self
+//        cropScrollView.minimumZoomScale = 1.0
+//        cropScrollView.maximumZoomScale = 10.0
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+//        cropScrollView.isHidden = true
+    }
 
     func imagePickerController(
         _ picker: UIImagePickerController,
         didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
-        print("2@")
         guard let image = info[.originalImage] as? UIImage else {
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
@@ -46,13 +63,13 @@ class ImageCropperViewController: UIViewController, UIImagePickerControllerDeleg
         return imagePicked
     }
 
-    var cropArea:CGRect{
+    var cropArea: CGRect {
         get{
             let factor = imagePicked.image!.size.width/view.frame.width
-            let scale = 1/scrollView.zoomScale
+            let scale = 1/imageScrollView.zoomScale
             let imageFrame = imagePicked.imageFrame()
-            let x = (scrollView.contentOffset.x + cropAreaView.frame.origin.x - imageFrame.origin.x) * scale * factor
-            let y = (scrollView.contentOffset.y + cropAreaView.frame.origin.y - imageFrame.origin.y) * scale * factor
+            let x = (imageScrollView.contentOffset.x + cropAreaView.frame.origin.x - imageFrame.origin.x) * scale * factor
+            let y = (imageScrollView.contentOffset.y + cropAreaView.frame.origin.y - imageFrame.origin.y) * scale * factor
             let width = cropAreaView.frame.size.width * scale * factor
             let height = cropAreaView.frame.size.height * scale * factor
             return CGRect(x: x, y: y, width: width, height: height)
@@ -64,12 +81,12 @@ class ImageCropperViewController: UIViewController, UIImagePickerControllerDeleg
         let croppedImage = UIImage(cgImage: croppedCGImage!)
         imagePicked.image = croppedImage
 
-        scrollView.zoomScale = 1
+        imageScrollView.zoomScale = 1
     }
 }
 
 extension UIImageView {
-    func imageFrame()->CGRect{
+    func imageFrame() -> CGRect{
         let imageViewSize = self.frame.size
 
         guard let imageSize = self.image?.size else{return CGRect.zero}

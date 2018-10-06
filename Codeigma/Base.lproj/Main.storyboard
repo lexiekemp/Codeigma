@@ -98,11 +98,18 @@
                                     <constraint firstItem="bLX-Yj-ce4" firstAttribute="top" secondItem="yQU-Ev-zoe" secondAttribute="top" id="ocZ-hD-rhr"/>
                                 </constraints>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-GI-OMZ">
+                                <rect key="frame" x="24" y="625" width="99" height="30"/>
+                                <state key="normal" title="Confirm Zoom"/>
+                                <connections>
+                                    <action selector="confirmZoom:" destination="Ocm-3D-tl3" eventType="touchUpInside" id="9bM-YX-imP"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUj-pn-xlN" customClass="CropAreaView" customModule="Codeigma" customModuleProvider="target">
-                                <rect key="frame" x="100" y="80" width="175" height="507"/>
+                                <rect key="frame" x="137.5" y="80" width="100" height="507"/>
                                 <color key="backgroundColor" red="1" green="0.99040098716342406" blue="0.28526221866997981" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="WUj-pn-xlN" secondAttribute="height" multiplier="175:507" id="V5P-kG-xHK"/>
+                                    <constraint firstAttribute="width" secondItem="WUj-pn-xlN" secondAttribute="height" multiplier="100:507" id="Of0-pb-SIo"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -110,22 +117,24 @@
                         <constraints>
                             <constraint firstItem="HmE-ge-M33" firstAttribute="bottom" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="35" id="6gn-VE-Jh2"/>
                             <constraint firstItem="gl0-Z3-Uee" firstAttribute="centerY" secondItem="HmE-ge-M33" secondAttribute="centerY" id="AE3-3U-255"/>
-                            <constraint firstItem="WUj-pn-xlN" firstAttribute="top" secondItem="XoX-52-DJX" secondAttribute="top" constant="60" id="If5-Wx-9Dk"/>
+                            <constraint firstItem="E2C-GI-OMZ" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="24" id="B1s-Wy-Fkp"/>
+                            <constraint firstItem="WUj-pn-xlN" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="137.5" id="IWm-iP-a1u"/>
                             <constraint firstItem="HmE-ge-M33" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="170" id="MQK-CO-JEJ"/>
+                            <constraint firstItem="E2C-GI-OMZ" firstAttribute="top" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="8" symbolic="YES" id="MzR-va-UOJ"/>
                             <constraint firstItem="XoX-52-DJX" firstAttribute="bottom" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="50" id="PQk-ai-kyq"/>
                             <constraint firstItem="yQU-Ev-zoe" firstAttribute="top" secondItem="XoX-52-DJX" secondAttribute="top" id="Q5V-T7-Sxu"/>
-                            <constraint firstItem="WUj-pn-xlN" firstAttribute="centerX" secondItem="yQU-Ev-zoe" secondAttribute="centerX" id="Vre-Nv-dv8"/>
-                            <constraint firstItem="WUj-pn-xlN" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="100" id="Z9K-nW-Lic"/>
+                            <constraint firstItem="WUj-pn-xlN" firstAttribute="centerY" secondItem="ZzA-Rm-oYM" secondAttribute="centerY" id="S4A-Zi-Hk7"/>
                             <constraint firstItem="XoX-52-DJX" firstAttribute="trailing" secondItem="yQU-Ev-zoe" secondAttribute="trailing" id="bhl-N2-Xei"/>
                             <constraint firstItem="XoX-52-DJX" firstAttribute="trailing" secondItem="gl0-Z3-Uee" secondAttribute="trailing" constant="44" id="n7i-xk-kIz"/>
                             <constraint firstItem="yQU-Ev-zoe" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" id="upS-Ab-OTt"/>
+                            <constraint firstItem="WUj-pn-xlN" firstAttribute="centerX" secondItem="XoX-52-DJX" secondAttribute="centerX" id="wnD-1e-NCq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XoX-52-DJX"/>
                     </view>
                     <connections>
                         <outlet property="cropAreaView" destination="WUj-pn-xlN" id="ptj-8B-TCW"/>
                         <outlet property="imagePicked" destination="bLX-Yj-ce4" id="mvO-SE-R0K"/>
-                        <outlet property="scrollView" destination="yQU-Ev-zoe" id="Hkk-kR-qRP"/>
+                        <outlet property="imageScrollView" destination="yQU-Ev-zoe" id="0Ri-iy-gDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bg2-9Y-mL1" userLabel="First Responder" sceneMemberID="firstResponder"/>

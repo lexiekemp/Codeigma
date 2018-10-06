@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
-		E9EFD9BD216860EF00EB39A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BC216860EF00EB39A4 /* ViewController.swift */; };
 		E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Main.storyboard */; };
 		E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */; };
 		E9EFD9C52168610100EB39A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9C42168610100EB39A4 /* Assets.xcassets */; };
 		E9EFD9C82168610100EB39A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */; };
+		E9EFD9D0216869B000EB39A4 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9CF216869B000EB39A4 /* LoadingViewController.swift */; };
+		E9EFD9D2216869CE00EB39A4 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9D1216869CE00EB39A4 /* ResultViewController.swift */; };
+		E9EFD9D421686B1300EB39A4 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9D321686B1300EB39A4 /* ChecklistViewController.swift */; };
+		E9EFD9D621686B2C00EB39A4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9D521686B2C00EB39A4 /* DashboardViewController.swift */; };
+		E9EFD9D921686EF600EB39A4 /* CodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9D821686EF600EB39A4 /* CodeTableViewCell.swift */; };
+		E9EFD9DB21686F1700EB39A4 /* BillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9DA21686F1700EB39A4 /* BillTableViewCell.swift */; };
+		E9EFD9EB2168775F00EB39A4 /* Code+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9E72168775F00EB39A4 /* Code+CoreDataClass.swift */; };
+		E9EFD9ED2168775F00EB39A4 /* Bill+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9E92168775F00EB39A4 /* Bill+CoreDataClass.swift */; };
+		E9EFD9EE2168775F00EB39A4 /* Bill+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9EA2168775F00EB39A4 /* Bill+CoreDataProperties.swift */; };
+		E9EFD9F221687C1400EB39A4 /* Code+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9F021687C1400EB39A4 /* Code+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9EFD9BC216860EF00EB39A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9EFD9C2216860EF00EB39A4 /* Codeigma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Codeigma.xcdatamodel; sourceTree = "<group>"; };
 		E9EFD9C42168610100EB39A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9EFD9C72168610100EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9EFD9C92168610200EB39A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EFD9CF216869B000EB39A4 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		E9EFD9D1216869CE00EB39A4 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		E9EFD9D321686B1300EB39A4 /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
+		E9EFD9D521686B2C00EB39A4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		E9EFD9D821686EF600EB39A4 /* CodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTableViewCell.swift; sourceTree = "<group>"; };
+		E9EFD9DA21686F1700EB39A4 /* BillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillTableViewCell.swift; sourceTree = "<group>"; };
+		E9EFD9E72168775F00EB39A4 /* Code+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E9EFD9E92168775F00EB39A4 /* Bill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E9EFD9EA2168775F00EB39A4 /* Bill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E9EFD9F021687C1400EB39A4 /* Code+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +75,55 @@
 			isa = PBXGroup;
 			children = (
 				E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */,
-				E9EFD9BC216860EF00EB39A4 /* ViewController.swift */,
 				E9EFD9BE216860EF00EB39A4 /* Main.storyboard */,
+				E9EFD9E6216876DB00EB39A4 /* Core Data */,
+				E9EFD9D721686B3400EB39A4 /* Views */,
 				E9EFD9C42168610100EB39A4 /* Assets.xcassets */,
 				E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */,
 				E9EFD9C92168610200EB39A4 /* Info.plist */,
-				E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */,
 			);
 			path = Codeigma;
+			sourceTree = "<group>";
+		};
+		E9EFD9D721686B3400EB39A4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD9DC21686F2400EB39A4 /* Dashboard */,
+				E9EFD9DD21686F3000EB39A4 /* Checklist */,
+				E9EFD9D1216869CE00EB39A4 /* ResultViewController.swift */,
+				E9EFD9CF216869B000EB39A4 /* LoadingViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E9EFD9DC21686F2400EB39A4 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD9D521686B2C00EB39A4 /* DashboardViewController.swift */,
+				E9EFD9DA21686F1700EB39A4 /* BillTableViewCell.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		E9EFD9DD21686F3000EB39A4 /* Checklist */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD9D321686B1300EB39A4 /* ChecklistViewController.swift */,
+				E9EFD9D821686EF600EB39A4 /* CodeTableViewCell.swift */,
+			);
+			path = Checklist;
+			sourceTree = "<group>";
+		};
+		E9EFD9E6216876DB00EB39A4 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				E9EFD9E72168775F00EB39A4 /* Code+CoreDataClass.swift */,
+				E9EFD9F021687C1400EB39A4 /* Code+CoreDataProperties.swift */,
+				E9EFD9E92168775F00EB39A4 /* Bill+CoreDataClass.swift */,
+				E9EFD9EA2168775F00EB39A4 /* Bill+CoreDataProperties.swift */,
+				E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */,
+			);
+			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +197,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9EFD9BD216860EF00EB39A4 /* ViewController.swift in Sources */,
+				E9EFD9DB21686F1700EB39A4 /* BillTableViewCell.swift in Sources */,
+				E9EFD9ED2168775F00EB39A4 /* Bill+CoreDataClass.swift in Sources */,
+				E9EFD9EE2168775F00EB39A4 /* Bill+CoreDataProperties.swift in Sources */,
+				E9EFD9EB2168775F00EB39A4 /* Code+CoreDataClass.swift in Sources */,
+				E9EFD9F221687C1400EB39A4 /* Code+CoreDataProperties.swift in Sources */,
+				E9EFD9D2216869CE00EB39A4 /* ResultViewController.swift in Sources */,
+				E9EFD9D621686B2C00EB39A4 /* DashboardViewController.swift in Sources */,
+				E9EFD9D421686B1300EB39A4 /* ChecklistViewController.swift in Sources */,
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
 				E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */,
+				E9EFD9D0216869B000EB39A4 /* LoadingViewController.swift in Sources */,
+				E9EFD9D921686EF600EB39A4 /* CodeTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +357,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4PHT7QB8F;
 				INFOPLIST_FILE = Codeigma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +376,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4PHT7QB8F;
 				INFOPLIST_FILE = Codeigma/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

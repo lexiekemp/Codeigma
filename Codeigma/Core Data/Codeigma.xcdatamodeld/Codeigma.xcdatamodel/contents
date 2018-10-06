@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bill" representedClassName="Bill" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="codes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Code" inverseName="bill" inverseEntity="Code" syncable="YES"/>
+    </entity>
+    <entity name="Code" representedClassName="Code" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="evaluation" optional="YES" attributeType="Integer 64" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bill" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Bill" inverseName="codes" inverseEntity="Bill" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bill" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Code" positionX="240.6171875" positionY="-153.52734375" width="128" height="120"/>
+    </elements>
+</model>

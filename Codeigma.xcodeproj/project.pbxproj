@@ -11,6 +11,7 @@
 		CC3347A5216910C9004445CF /* CropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3347A4216910C9004445CF /* CropAreaView.swift */; };
 		CC559E592168729E0049042B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC559E572168729D0049042B /* LaunchScreen.storyboard */; };
 		CC559E5B2168732D0049042B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC559E5A2168732D0049042B /* Constants.swift */; };
+		CC838B1A21694DAE00D4446F /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC838B1921694DAE00D4446F /* Page3ViewController.swift */; };
 		CCD2F9C72168900C00AB92F7 /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD2F9C62168900C00AB92F7 /* ImageCropperViewController.swift */; };
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
 		E9EFD9BD216860EF00EB39A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BC216860EF00EB39A4 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		CC3347A4216910C9004445CF /* CropAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropAreaView.swift; sourceTree = "<group>"; };
 		CC559E582168729D0049042B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CC559E5A2168732D0049042B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CC838B1921694DAE00D4446F /* Page3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		CCD2F7252168856400AB92F7 /* Codeigma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Codeigma-Bridging-Header.h"; sourceTree = "<group>"; };
 		CCD2F9C62168900C00AB92F7 /* ImageCropperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +70,7 @@
 				E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */,
 				E9EFD9BC216860EF00EB39A4 /* ViewController.swift */,
 				CC559E572168729D0049042B /* LaunchScreen.storyboard */,
+				CC838B1921694DAE00D4446F /* Page3ViewController.swift */,
 				CC559E5A2168732D0049042B /* Constants.swift */,
 				E9EFD9BE216860EF00EB39A4 /* Main.storyboard */,
 				CC231BA521693B7500D90D23 /* SegueFromRight.swift */,
@@ -156,6 +159,7 @@
 				E9EFD9BD216860EF00EB39A4 /* ViewController.swift in Sources */,
 				CCD2F9C72168900C00AB92F7 /* ImageCropperViewController.swift in Sources */,
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
+				CC838B1A21694DAE00D4446F /* Page3ViewController.swift in Sources */,
 				E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */,
 				CC231BA621693B7500D90D23 /* SegueFromRight.swift in Sources */,
 				CC559E5B2168732D0049042B /* Constants.swift in Sources */,

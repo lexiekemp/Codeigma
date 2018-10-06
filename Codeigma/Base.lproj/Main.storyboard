@@ -232,94 +232,9 @@
                         <segue destination="D2z-1W-wRM" kind="show" customClass="SegueFromRight" customModule="Codeigma" customModuleProvider="target" id="KLs-zW-D02"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="nFA-IO-9w0">
-                    <connections>
-                        <segue destination="Ocm-3D-tl3" kind="custom" customClass="SegueFromRight" customModule="Codeigma" customModuleProvider="target" id="XQ5-BN-a2P"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nFA-IO-9w0"/>
             </objects>
             <point key="canvasLocation" x="879" y="33"/>
-        </scene>
-        <!--Image Cropper View Controller-->
-        <scene sceneID="PBc-Hd-Tjk">
-            <objects>
-                <viewController id="Ocm-3D-tl3" customClass="ImageCropperViewController" customModule="Codeigma" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZzA-Rm-oYM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-ge-M33">
-                                <rect key="frame" x="170" y="622" width="54" height="30"/>
-                                <state key="normal" title="Camera"/>
-                                <connections>
-                                    <action selector="openCameraButtonWithSender:" destination="Ocm-3D-tl3" eventType="touchUpInside" id="dgW-jf-wN2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl0-Z3-Uee">
-                                <rect key="frame" x="297" y="622" width="34" height="30"/>
-                                <state key="normal" title="Crop"/>
-                                <connections>
-                                    <action selector="crop:" destination="Ocm-3D-tl3" eventType="touchUpInside" id="aBi-Qi-Z6U"/>
-                                </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQU-Ev-zoe">
-                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="new_york" translatesAutoresizingMaskIntoConstraints="NO" id="bLX-Yj-ce4">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
-                                    </imageView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="centerY" secondItem="yQU-Ev-zoe" secondAttribute="centerY" id="0bz-nA-iFZ"/>
-                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="centerX" secondItem="yQU-Ev-zoe" secondAttribute="centerX" id="6f9-ZZ-hND"/>
-                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="leading" secondItem="yQU-Ev-zoe" secondAttribute="leading" id="MXP-wy-XBT"/>
-                                    <constraint firstAttribute="trailing" secondItem="bLX-Yj-ce4" secondAttribute="trailing" id="RH7-Yv-FaY"/>
-                                    <constraint firstAttribute="bottom" secondItem="bLX-Yj-ce4" secondAttribute="bottom" id="WgV-vF-9uP"/>
-                                    <constraint firstItem="bLX-Yj-ce4" firstAttribute="top" secondItem="yQU-Ev-zoe" secondAttribute="top" id="ocZ-hD-rhr"/>
-                                </constraints>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E2C-GI-OMZ">
-                                <rect key="frame" x="24" y="625" width="99" height="30"/>
-                                <state key="normal" title="Confirm Zoom"/>
-                                <connections>
-                                    <action selector="confirmZoom:" destination="Ocm-3D-tl3" eventType="touchUpInside" id="9bM-YX-imP"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUj-pn-xlN" customClass="CropAreaView" customModule="Codeigma" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="80" width="100" height="507"/>
-                                <color key="backgroundColor" red="1" green="0.99040098716342406" blue="0.28526221866997981" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="WUj-pn-xlN" secondAttribute="height" multiplier="100:507" id="Of0-pb-SIo"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="HmE-ge-M33" firstAttribute="bottom" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="35" id="6gn-VE-Jh2"/>
-                            <constraint firstItem="gl0-Z3-Uee" firstAttribute="centerY" secondItem="HmE-ge-M33" secondAttribute="centerY" id="AE3-3U-255"/>
-                            <constraint firstItem="E2C-GI-OMZ" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="24" id="B1s-Wy-Fkp"/>
-                            <constraint firstItem="WUj-pn-xlN" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="137.5" id="IWm-iP-a1u"/>
-                            <constraint firstItem="HmE-ge-M33" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" constant="170" id="MQK-CO-JEJ"/>
-                            <constraint firstItem="E2C-GI-OMZ" firstAttribute="top" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="8" symbolic="YES" id="MzR-va-UOJ"/>
-                            <constraint firstItem="XoX-52-DJX" firstAttribute="bottom" secondItem="yQU-Ev-zoe" secondAttribute="bottom" constant="50" id="PQk-ai-kyq"/>
-                            <constraint firstItem="yQU-Ev-zoe" firstAttribute="top" secondItem="XoX-52-DJX" secondAttribute="top" id="Q5V-T7-Sxu"/>
-                            <constraint firstItem="WUj-pn-xlN" firstAttribute="centerY" secondItem="ZzA-Rm-oYM" secondAttribute="centerY" id="S4A-Zi-Hk7"/>
-                            <constraint firstItem="XoX-52-DJX" firstAttribute="trailing" secondItem="yQU-Ev-zoe" secondAttribute="trailing" id="bhl-N2-Xei"/>
-                            <constraint firstItem="XoX-52-DJX" firstAttribute="trailing" secondItem="gl0-Z3-Uee" secondAttribute="trailing" constant="44" id="n7i-xk-kIz"/>
-                            <constraint firstItem="yQU-Ev-zoe" firstAttribute="leading" secondItem="XoX-52-DJX" secondAttribute="leading" id="upS-Ab-OTt"/>
-                            <constraint firstItem="WUj-pn-xlN" firstAttribute="centerX" secondItem="XoX-52-DJX" secondAttribute="centerX" id="wnD-1e-NCq"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="XoX-52-DJX"/>
-                    </view>
-                    <connections>
-                        <outlet property="cropAreaView" destination="WUj-pn-xlN" id="ptj-8B-TCW"/>
-                        <outlet property="imagePicked" destination="bLX-Yj-ce4" id="mvO-SE-R0K"/>
-                        <outlet property="imageScrollView" destination="yQU-Ev-zoe" id="0Ri-iy-gDL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bg2-9Y-mL1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1642" y="-790"/>
         </scene>
         <!--Page 2-->
         <scene sceneID="vyZ-Wq-IFH">
@@ -407,18 +322,14 @@
                         <segue destination="yg4-4h-5lC" kind="show" customClass="SegueFromRight" customModule="Codeigma" customModuleProvider="target" id="AVQ-1S-Oix"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="zJC-j5-QqB">
-                    <connections>
-                        <segue destination="Ocm-3D-tl3" kind="custom" customClass="SegueFromRight" customModule="Codeigma" customModuleProvider="target" id="KQQ-87-Ysv"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="zJC-j5-QqB"/>
             </objects>
             <point key="canvasLocation" x="1740" y="33"/>
         </scene>
         <!--Page 3-->
         <scene sceneID="hsh-Rn-ccW">
             <objects>
-                <viewController id="yg4-4h-5lC" userLabel="Page 3" sceneMemberID="viewController">
+                <viewController id="yg4-4h-5lC" userLabel="Page 3" customClass="Page3ViewController" customModule="Codeigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="giJ-SQ-HlR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,27 +354,26 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Receive a detailed report of what you were billed for." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnS-2h-UKq">
-                                <rect key="frame" x="36" y="385" width="303" height="37.5"/>
+                                <rect key="frame" x="36" y="385" width="303" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="8dm-cT-fNg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="page3_dots" translatesAutoresizingMaskIntoConstraints="NO" id="qMN-qe-MNO">
-                                <rect key="frame" x="151" y="481.5" width="74" height="14"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="oZo-wJ-abq">
-                                <rect key="frame" x="54" y="552" width="267" height="52"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="UF7-8D-BKb" appends="YES" id="gc5-Pp-gX4"/>
-                                </connections>
+                                <rect key="frame" x="151" y="482" width="73" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="f52-b7-O2d"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tf1-od-KYQ">
-                                <rect key="frame" x="165" y="687" width="46" height="30"/>
+                                <rect key="frame" x="164" y="687" width="47" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Skip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74D-y0-bug">
-                                <rect key="frame" x="170" y="618" width="34" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74D-y0-bug">
+                                <rect key="frame" x="170.5" y="618" width="34" height="21"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -472,44 +382,47 @@
                                     <outletCollection property="gestureRecognizers" destination="Fop-GQ-5id" appends="YES" id="wHW-yQ-qXP"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9G-P0-qFA" userLabel="Next">
+                                <rect key="frame" x="50" y="550" width="275" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Cmr-5X-lOs"/>
+                                </constraints>
+                                <state key="normal" image="next"/>
+                                <connections>
+                                    <action selector="openCameraButtonWithSender:" destination="yg4-4h-5lC" eventType="touchUpInside" id="IDu-ep-6LH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rD7-xF-jfC" firstAttribute="top" secondItem="J2U-Um-0qZ" secondAttribute="top" constant="30" id="1Ff-Og-H8R"/>
-                            <constraint firstItem="MnS-2h-UKq" firstAttribute="top" secondItem="D7J-hD-dhL" secondAttribute="bottom" constant="12" id="1Z4-f0-8Pr"/>
-                            <constraint firstItem="qMN-qe-MNO" firstAttribute="top" secondItem="MnS-2h-UKq" secondAttribute="bottom" constant="59" id="3Ew-hE-RFm"/>
+                            <constraint firstItem="o9G-P0-qFA" firstAttribute="centerX" secondItem="74D-y0-bug" secondAttribute="centerX" id="5dA-G0-RqT"/>
+                            <constraint firstItem="MnS-2h-UKq" firstAttribute="centerX" secondItem="D7J-hD-dhL" secondAttribute="centerX" id="6rX-aj-f1b"/>
                             <constraint firstItem="J2U-Um-0qZ" firstAttribute="trailing" secondItem="tf1-od-KYQ" secondAttribute="trailing" constant="164" id="75h-Oc-ehA"/>
                             <constraint firstItem="D7J-hD-dhL" firstAttribute="top" secondItem="HaO-Qm-W5p" secondAttribute="bottom" constant="47" id="9iE-fj-3OM"/>
-                            <constraint firstItem="74D-y0-bug" firstAttribute="top" secondItem="oZo-wJ-abq" secondAttribute="bottom" constant="14" id="Gce-IJ-t3j"/>
+                            <constraint firstItem="o9G-P0-qFA" firstAttribute="top" secondItem="qMN-qe-MNO" secondAttribute="bottom" constant="54" id="ESf-Os-M71"/>
+                            <constraint firstItem="MnS-2h-UKq" firstAttribute="top" secondItem="D7J-hD-dhL" secondAttribute="bottom" constant="12" id="PzD-Zj-DSp"/>
                             <constraint firstItem="D7J-hD-dhL" firstAttribute="centerX" secondItem="HaO-Qm-W5p" secondAttribute="centerX" id="Rmt-nl-KMf"/>
                             <constraint firstItem="J2U-Um-0qZ" firstAttribute="bottom" secondItem="tf1-od-KYQ" secondAttribute="bottom" constant="-50" id="S64-5z-GS4"/>
-                            <constraint firstItem="qMN-qe-MNO" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="151" id="Smh-4e-j07"/>
                             <constraint firstItem="HaO-Qm-W5p" firstAttribute="top" secondItem="J2U-Um-0qZ" secondAttribute="top" constant="168" id="VDR-uf-SVW"/>
                             <constraint firstItem="D7J-hD-dhL" firstAttribute="centerX" secondItem="J2U-Um-0qZ" secondAttribute="centerX" id="XS8-MS-YrP"/>
-                            <constraint firstItem="J2U-Um-0qZ" firstAttribute="trailing" secondItem="qMN-qe-MNO" secondAttribute="trailing" constant="150" id="Ykf-PG-FlS"/>
-                            <constraint firstItem="MnS-2h-UKq" firstAttribute="trailing" secondItem="J2U-Um-0qZ" secondAttribute="trailing" constant="-36" id="ayH-WF-d7S"/>
+                            <constraint firstItem="MnS-2h-UKq" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="36" id="aS2-qF-8sU"/>
                             <constraint firstItem="J2U-Um-0qZ" firstAttribute="trailing" secondItem="rD7-xF-jfC" secondAttribute="trailing" constant="21" id="gKX-Oc-X87"/>
-                            <constraint firstItem="MnS-2h-UKq" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="36" id="kcf-3C-dN7"/>
+                            <constraint firstItem="qMN-qe-MNO" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="151" id="i6c-SF-wop"/>
+                            <constraint firstItem="MnS-2h-UKq" firstAttribute="centerX" secondItem="qMN-qe-MNO" secondAttribute="centerX" id="kia-ni-Af4"/>
                             <constraint firstItem="74D-y0-bug" firstAttribute="centerX" secondItem="J2U-Um-0qZ" secondAttribute="centerX" id="q1c-sj-DQJ"/>
                             <constraint firstItem="HaO-Qm-W5p" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="144" id="qvZ-YN-WhC"/>
-                            <constraint firstItem="oZo-wJ-abq" firstAttribute="centerX" secondItem="J2U-Um-0qZ" secondAttribute="centerX" id="tfM-df-aMw"/>
-                            <constraint firstItem="oZo-wJ-abq" firstAttribute="top" secondItem="qMN-qe-MNO" secondAttribute="bottom" constant="29" id="whq-K9-YZf"/>
+                            <constraint firstItem="74D-y0-bug" firstAttribute="top" secondItem="o9G-P0-qFA" secondAttribute="bottom" constant="16" id="uUv-JH-hbn"/>
+                            <constraint firstItem="o9G-P0-qFA" firstAttribute="centerX" secondItem="tf1-od-KYQ" secondAttribute="centerX" id="uzC-Qn-1Z8"/>
+                            <constraint firstAttribute="bottom" secondItem="o9G-P0-qFA" secondAttribute="bottom" constant="65" id="w6N-fj-gD8"/>
                             <constraint firstItem="rD7-xF-jfC" firstAttribute="leading" secondItem="J2U-Um-0qZ" secondAttribute="leading" constant="334" id="ytT-d6-MqG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J2U-Um-0qZ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sWf-kT-Pla" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="UF7-8D-BKb">
-                    <connections>
-                        <segue destination="Ocm-3D-tl3" kind="show" customClass="SegueFromRight" customModule="Codeigma" customModuleProvider="target" id="afa-CH-ME8"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="Fop-GQ-5id">
-                    <connections>
-                        <segue destination="Ocm-3D-tl3" kind="custom" customClass="SegueFromRight" customModule="Codeigma" customModuleProvider="target" id="dJn-My-NHl"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UF7-8D-BKb"/>
+                <tapGestureRecognizer id="Fop-GQ-5id"/>
                 <tapGestureRecognizer id="z0b-6l-BXx"/>
             </objects>
             <point key="canvasLocation" x="2796" y="33"/>
@@ -523,14 +436,10 @@
         <image name="codeigma_logo" width="69" height="54"/>
         <image name="google_pic" width="28" height="28"/>
         <image name="highlighter" width="105" height="102"/>
-        <image name="new_york" width="943.67999267578125" height="668.15997314453125"/>
         <image name="next" width="275" height="60"/>
         <image name="page1_dots" width="74" height="14"/>
         <image name="page2_dots" width="72" height="14"/>
         <image name="page3_dots" width="74" height="14"/>
         <image name="phone" width="88" height="130"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="XQ5-BN-a2P"/>
-    </inferredMetricsTieBreakers>
 </document>

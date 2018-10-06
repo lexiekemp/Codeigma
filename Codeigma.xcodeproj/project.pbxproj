@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC559E592168729E0049042B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC559E572168729D0049042B /* LaunchScreen.storyboard */; };
+		CC559E5B2168732D0049042B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC559E5A2168732D0049042B /* Constants.swift */; };
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
 		E9EFD9BD216860EF00EB39A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BC216860EF00EB39A4 /* ViewController.swift */; };
 		E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Main.storyboard */; };
 		E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */; };
 		E9EFD9C52168610100EB39A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9C42168610100EB39A4 /* Assets.xcassets */; };
-		E9EFD9C82168610100EB39A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC559E582168729D0049042B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CC559E5A2168732D0049042B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CCD2F7252168856400AB92F7 /* Codeigma-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Codeigma-Bridging-Header.h"; sourceTree = "<group>"; };
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9EFD9BC216860EF00EB39A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9EFD9C2216860EF00EB39A4 /* Codeigma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Codeigma.xcdatamodel; sourceTree = "<group>"; };
 		E9EFD9C42168610100EB39A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E9EFD9C72168610100EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9EFD9C92168610200EB39A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,11 +61,13 @@
 			children = (
 				E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */,
 				E9EFD9BC216860EF00EB39A4 /* ViewController.swift */,
+				CC559E572168729D0049042B /* LaunchScreen.storyboard */,
+				CC559E5A2168732D0049042B /* Constants.swift */,
 				E9EFD9BE216860EF00EB39A4 /* Main.storyboard */,
 				E9EFD9C42168610100EB39A4 /* Assets.xcassets */,
-				E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */,
 				E9EFD9C92168610200EB39A4 /* Info.plist */,
 				E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */,
+				CCD2F7252168856400AB92F7 /* Codeigma-Bridging-Header.h */,
 			);
 			path = Codeigma;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 				TargetAttributes = {
 					E9EFD9B6216860EF00EB39A4 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -125,7 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9EFD9C82168610100EB39A4 /* LaunchScreen.storyboard in Resources */,
+				CC559E592168729E0049042B /* LaunchScreen.storyboard in Resources */,
 				E9EFD9C52168610100EB39A4 /* Assets.xcassets in Resources */,
 				E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */,
 			);
@@ -141,26 +147,27 @@
 				E9EFD9BD216860EF00EB39A4 /* ViewController.swift in Sources */,
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
 				E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */,
+				CC559E5B2168732D0049042B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		CC559E572168729D0049042B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC559E582168729D0049042B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		E9EFD9BE216860EF00EB39A4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E9EFD9BF216860EF00EB39A4 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E9EFD9C62168610100EB39A4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E9EFD9C72168610100EB39A4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -286,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4PHT7QB8F;
 				INFOPLIST_FILE = Codeigma/Info.plist;
@@ -293,8 +301,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftCamScanner/Example/Pods/OpenCV/ios",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lexiekemp.Codeigma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Codeigma/Codeigma-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,6 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4PHT7QB8F;
 				INFOPLIST_FILE = Codeigma/Info.plist;
@@ -311,8 +326,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SwiftCamScanner/Example/Pods/OpenCV/ios",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = lexiekemp.Codeigma;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Codeigma/Codeigma-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

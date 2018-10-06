@@ -1,24 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="JosefinSans-SemiBoldItalic.ttf">
+            <string>JosefinSans-SemiBoldItalic</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Codeigma" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codeigma_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vfe-eL-WL2">
+                                <rect key="frame" x="155" y="256" width="69" height="31"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codeigma" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-oK-aAJ">
+                                <rect key="frame" x="112" y="287" width="152" height="40"/>
+                                <fontDescription key="fontDescription" name="JosefinSans-SemiBoldItalic" family="Josefin Sans" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3i-ec-mgX">
+                                <rect key="frame" x="236" y="468" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7Bh-oK-aAJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="8Rt-9W-zCj"/>
+                            <constraint firstItem="7Bh-oK-aAJ" firstAttribute="top" secondItem="Vfe-eL-WL2" secondAttribute="bottom" id="Evx-cm-9yR"/>
+                            <constraint firstItem="Vfe-eL-WL2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="236" id="ISp-lk-PB7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7Bh-oK-aAJ" secondAttribute="trailing" constant="111" id="K5X-aU-o83"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vfe-eL-WL2" secondAttribute="trailing" constant="151" id="TyV-1O-iDB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7Bh-oK-aAJ" secondAttribute="bottom" constant="340" id="arC-uU-98G"/>
+                            <constraint firstItem="Vfe-eL-WL2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="hM7-xA-Nek"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vfe-eL-WL2" secondAttribute="bottom" constant="380" id="yv3-vX-xMe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="logo" destination="Vfe-eL-WL2" id="s6t-eK-cHy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="1DH-dr-RuL">
+            <objects>
+                <viewController id="Jsg-aj-hEU" customClass="CameraViewController" customModule="SwiftCamScanner_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ZO-lX-tYf"/>
+                        <viewControllerLayoutGuide type="bottom" id="ckZ-xc-gqt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hEa-PU-kz4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xw6-17-82m" userLabel="cameraView" customClass="CameraView" customModule="SwiftCamScanner_Example" customModuleProvider="target">
+                                <rect key="frame" x="-16" y="20" width="391" height="647"/>
+                            </view>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJF-BD-5V2">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Qa4-au-iSs"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcg-ct-DlD">
+                                <rect key="frame" x="147.5" y="577" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Gpd-ir-hSv"/>
+                                    <constraint firstAttribute="width" constant="80" id="J4N-qQ-BXC"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="Capture_Butt"/>
+                                <connections>
+                                    <action selector="captureImage:" destination="Jsg-aj-hEU" eventType="touchUpInside" id="uDW-yK-A1E"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7m-cG-SRi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feY-sB-7xV" userLabel="SwitchCam">
+                                        <rect key="frame" x="320" y="10" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="N0T-xk-RDg"/>
+                                            <constraint firstAttribute="width" constant="30" id="gXl-pd-6hi"/>
+                                        </constraints>
+                                        <state key="normal" image="Camera_Icon"/>
+                                        <connections>
+                                            <action selector="switchCamera:" destination="Jsg-aj-hEU" eventType="touchUpInside" id="VlE-mQ-NHd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sda-2o-cwb" userLabel="Flash">
+                                        <rect key="frame" x="25" y="10" width="30" height="30"/>
+                                        <state key="normal" image="flashAuto"/>
+                                        <connections>
+                                            <action selector="onFlashTap:" destination="Jsg-aj-hEU" eventType="touchUpInside" id="uRv-T9-HnA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="feY-sB-7xV" secondAttribute="trailing" constant="25" id="4j4-8t-YMT"/>
+                                    <constraint firstAttribute="height" constant="50" id="BFI-06-Bci"/>
+                                    <constraint firstItem="Sda-2o-cwb" firstAttribute="width" secondItem="feY-sB-7xV" secondAttribute="width" id="F0T-5u-kht"/>
+                                    <constraint firstItem="Sda-2o-cwb" firstAttribute="height" secondItem="feY-sB-7xV" secondAttribute="height" id="JoF-Bo-RU7"/>
+                                    <constraint firstItem="Sda-2o-cwb" firstAttribute="leading" secondItem="q7m-cG-SRi" secondAttribute="leading" constant="25" id="NLM-6M-pza"/>
+                                    <constraint firstItem="feY-sB-7xV" firstAttribute="centerY" secondItem="q7m-cG-SRi" secondAttribute="centerY" id="iN1-Xs-LT9"/>
+                                    <constraint firstItem="Sda-2o-cwb" firstAttribute="top" secondItem="feY-sB-7xV" secondAttribute="top" id="pyK-O6-4Dl"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yf1-hr-Xvj">
+                                <rect key="frame" x="50.5" y="594.5" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="LIc-5h-Zi7"/>
+                                    <constraint firstAttribute="height" constant="45" id="q95-hE-kZa"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="q7m-cG-SRi" secondAttribute="trailing" id="4Il-8n-eVo"/>
+                            <constraint firstItem="zcg-ct-DlD" firstAttribute="leading" secondItem="yf1-hr-Xvj" secondAttribute="trailing" constant="52" id="G1a-2m-9uv"/>
+                            <constraint firstItem="q7m-cG-SRi" firstAttribute="top" secondItem="8ZO-lX-tYf" secondAttribute="bottom" id="JEv-Qs-cfn"/>
+                            <constraint firstAttribute="trailing" secondItem="Xw6-17-82m" secondAttribute="trailing" id="NtU-rY-pNz"/>
+                            <constraint firstItem="eJF-BD-5V2" firstAttribute="leading" secondItem="hEa-PU-kz4" secondAttribute="leading" id="O1m-GK-2rw"/>
+                            <constraint firstItem="ckZ-xc-gqt" firstAttribute="top" secondItem="eJF-BD-5V2" secondAttribute="bottom" id="RhN-ev-UOX"/>
+                            <constraint firstItem="zcg-ct-DlD" firstAttribute="centerX" secondItem="eJF-BD-5V2" secondAttribute="centerX" id="RtP-IL-nZI"/>
+                            <constraint firstItem="Xw6-17-82m" firstAttribute="top" secondItem="8ZO-lX-tYf" secondAttribute="bottom" id="VEx-rl-L3n"/>
+                            <constraint firstItem="ckZ-xc-gqt" firstAttribute="top" secondItem="Xw6-17-82m" secondAttribute="bottom" id="W3f-xg-cWi"/>
+                            <constraint firstItem="yf1-hr-Xvj" firstAttribute="centerY" secondItem="eJF-BD-5V2" secondAttribute="centerY" id="ZED-AD-mqb"/>
+                            <constraint firstItem="Xw6-17-82m" firstAttribute="leading" secondItem="hEa-PU-kz4" secondAttribute="leading" constant="-16" id="f8c-R5-yuS"/>
+                            <constraint firstAttribute="trailing" secondItem="eJF-BD-5V2" secondAttribute="trailing" id="fCG-vV-GWi"/>
+                            <constraint firstItem="zcg-ct-DlD" firstAttribute="centerY" secondItem="eJF-BD-5V2" secondAttribute="centerY" id="jxQ-bD-mc2"/>
+                            <constraint firstItem="q7m-cG-SRi" firstAttribute="leading" secondItem="hEa-PU-kz4" secondAttribute="leading" id="m5i-g7-0eV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5eB-A0-oLJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yu7-gN-o3F"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraView" destination="Xw6-17-82m" id="bqh-vL-GGQ"/>
+                        <outlet property="imageThumbnail" destination="yf1-hr-Xvj" id="Wlt-b6-Xgz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KBk-vl-XCL" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="33"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Camera_Icon" width="16" height="16"/>
+        <image name="Capture_Butt" width="16" height="16"/>
+        <image name="codeigma_logo" width="69" height="54"/>
+        <image name="flashAuto" width="16" height="16"/>
+    </resources>
 </document>

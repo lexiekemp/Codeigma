@@ -20,7 +20,10 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        codeImage = UIImage(named: "bill1")
+        // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if let tesseract = G8Tesseract(language: "eng") {
             tesseract.delegate = self
             tesseract.image = codeImage.g8_blackAndWhite()
@@ -31,7 +34,6 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
                 self.performSegue(withIdentifier: "goToResult", sender: bill)
             }
         }
-        // Do any additional setup after loading the view.
     }
     
     func progressImageRecognition(for tesseract: G8Tesseract!) {

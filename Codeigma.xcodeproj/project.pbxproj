@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		7A13C6174CA3406DE2727601 /* Pods_Codeigma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */; };
 		E928A84221692E85008E46DC /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84121692E85008E46DC /* RoundedView.swift */; };
+		E928A855216955BD008E46DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84E216955B8008E46DC /* ViewController.swift */; };
+		E928A856216955BD008E46DC /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A84F216955B9008E46DC /* ImageCropperViewController.swift */; };
+		E928A857216955BD008E46DC /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A850216955BA008E46DC /* SegueFromRight.swift */; };
+		E928A858216955BD008E46DC /* CropAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A851216955BB008E46DC /* CropAreaView.swift */; };
+		E928A859216955BD008E46DC /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A852216955BB008E46DC /* Page3ViewController.swift */; };
+		E928A85A216955BD008E46DC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E928A854216955BC008E46DC /* Constants.swift */; };
+		E928A85D216955CB008E46DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E928A85B216955CA008E46DC /* Main.storyboard */; };
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
 		E9EFD9C0216860EF00EB39A4 /* Final.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Final.storyboard */; };
 		E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */; };
@@ -32,6 +39,14 @@
 /* Begin PBXFileReference section */
 		4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Codeigma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E928A84121692E85008E46DC /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		E928A84E216955B8008E46DC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E928A84F216955B9008E46DC /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCropperViewController.swift; sourceTree = "<group>"; };
+		E928A850216955BA008E46DC /* SegueFromRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		E928A851216955BB008E46DC /* CropAreaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropAreaView.swift; sourceTree = "<group>"; };
+		E928A852216955BB008E46DC /* Page3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
+		E928A853216955BC008E46DC /* Codeigma-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Codeigma-Bridging-Header.h"; sourceTree = "<group>"; };
+		E928A854216955BC008E46DC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E928A85C216955CA008E46DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Final.storyboard; sourceTree = "<group>"; };
@@ -108,6 +123,14 @@
 			children = (
 				E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */,
 				E9EFD9BE216860EF00EB39A4 /* Final.storyboard */,
+				E928A85B216955CA008E46DC /* Main.storyboard */,
+				E928A853216955BC008E46DC /* Codeigma-Bridging-Header.h */,
+				E928A854216955BC008E46DC /* Constants.swift */,
+				E928A851216955BB008E46DC /* CropAreaView.swift */,
+				E928A84F216955B9008E46DC /* ImageCropperViewController.swift */,
+				E928A852216955BB008E46DC /* Page3ViewController.swift */,
+				E928A850216955BA008E46DC /* SegueFromRight.swift */,
+				E928A84E216955B8008E46DC /* ViewController.swift */,
 				E9EFD9F9216893A200EB39A4 /* Fonts */,
 				E9EFD9F32168913D00EB39A4 /* tessdata */,
 				E9EFD9E6216876DB00EB39A4 /* Core Data */,
@@ -230,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E928A85D216955CB008E46DC /* Main.storyboard in Resources */,
 				E9EFD9F82168938300EB39A4 /* SF-Pro-Display-Semibold.otf in Resources */,
 				E9EFD9C82168610100EB39A4 /* LaunchScreen.storyboard in Resources */,
 				E9EFD9F42168913E00EB39A4 /* tessdata in Resources */,
@@ -290,15 +314,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EFD9DB21686F1700EB39A4 /* BillTableViewCell.swift in Sources */,
+				E928A85A216955BD008E46DC /* Constants.swift in Sources */,
 				E9EFD9ED2168775F00EB39A4 /* Bill+CoreDataClass.swift in Sources */,
+				E928A858216955BD008E46DC /* CropAreaView.swift in Sources */,
 				E9EFD9EE2168775F00EB39A4 /* Bill+CoreDataProperties.swift in Sources */,
 				E9EFD9EB2168775F00EB39A4 /* Code+CoreDataClass.swift in Sources */,
+				E928A855216955BD008E46DC /* ViewController.swift in Sources */,
 				E9EFD9F221687C1400EB39A4 /* Code+CoreDataProperties.swift in Sources */,
 				E9EFD9D2216869CE00EB39A4 /* ResultViewController.swift in Sources */,
 				E9EFD9D621686B2C00EB39A4 /* DashboardViewController.swift in Sources */,
 				E928A84221692E85008E46DC /* RoundedView.swift in Sources */,
 				E9EFD9D421686B1300EB39A4 /* ChecklistViewController.swift in Sources */,
+				E928A857216955BD008E46DC /* SegueFromRight.swift in Sources */,
 				E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */,
+				E928A859216955BD008E46DC /* Page3ViewController.swift in Sources */,
+				E928A856216955BD008E46DC /* ImageCropperViewController.swift in Sources */,
 				E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */,
 				E9EFD9D0216869B000EB39A4 /* LoadingViewController.swift in Sources */,
 				E9EFD9D921686EF600EB39A4 /* CodeTableViewCell.swift in Sources */,
@@ -308,6 +338,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		E928A85B216955CA008E46DC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E928A85C216955CA008E46DC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		E9EFD9BE216860EF00EB39A4 /* Final.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

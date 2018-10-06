@@ -33,6 +33,18 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
     }
     
     func translateCodes(_ codeList: String) {
+        let codes = codeList.components(separatedBy: .whitespacesAndNewlines)
+        var codesdict = [String: String]()
+        for i in 0..<codes.count {
+            codesdict[String(i)] = codes[i]
+        }
+        let parameters: [String: AnyObject] = [
+            "codes" : (codesdict as AnyObject)
+        ]
+        
+        Alamofire.request("https://71ba8e65.ngrok.io/code", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+                print(response)
+        }
         
     }
     

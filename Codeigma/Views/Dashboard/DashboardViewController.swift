@@ -43,6 +43,10 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func addBill(_ sender: UIButton) {
     }
+    
+    public func goToChecklist(_ bill: Bill) {
+        self.performSegue(withIdentifier: "goToChecklist", sender: bill)
+    }
     func updateTable() {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Bill")
@@ -72,19 +76,19 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "billCell", for: indexPath) as! BillTableViewCell
         cell.selectionStyle = .none;
         if let bill = fetchedResultsController?.object(at: indexPath) as? Bill {
-            cell.inflate(bill: bill)
+            cell.inflate(bill: bill, dashboardVC: self)
         }
         return cell
     }
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToChecklist" {
+            if let checklistVC = segue.destination as? ChecklistViewController, let bill = sender as? Bill {
+                checklistVC.bill = bill
+            }
+        }
     }
-    */
-
 }

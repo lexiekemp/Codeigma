@@ -20,6 +20,9 @@ class BillTableViewCell: UITableViewCell {
     
     @IBOutlet weak var openButton: UIButton!
     
+    var dashboardViewController: DashboardViewController?
+    var myBill: Bill?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         openButton.layer.cornerRadius = openButton.frame.height/2
@@ -33,10 +36,14 @@ class BillTableViewCell: UITableViewCell {
     }
     
     @IBAction func openChecklist(_ sender: UIButton) {
-        
+        if myBill != nil, dashboardViewController != nil {
+            dashboardViewController!.goToChecklist(self.myBill!)
+        }
     }
     
-    func inflate(bill: Bill) {
+    func inflate(bill: Bill, dashboardVC: DashboardViewController) {
+        self.dashboardViewController = dashboardVC
+        self.myBill = bill
         if bill.date != nil {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "MMMM dd, yyyy"

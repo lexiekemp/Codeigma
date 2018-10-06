@@ -46,6 +46,7 @@ class CodeTableViewCell: UITableViewCell {
     }
 
     func inflate(code: Code) {
+        self.code = code
         titleLabel.text = code.title
         detailLabel.text = code.detail
         switch code.evaluation {

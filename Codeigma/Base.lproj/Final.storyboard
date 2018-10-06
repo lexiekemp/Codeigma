@@ -548,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="3516" y="5.8470764617691158"/>
         </scene>
-        <!--page3-->
+        <!--Page3-->
         <scene sceneID="5Ck-bl-HAV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="page3" id="WJp-ia-Q7R" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Page3" id="WJp-ia-Q7R" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZu-wg-9xv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3753" y="502"/>

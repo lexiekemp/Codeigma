@@ -21,14 +21,18 @@ class CodeTableViewCell: UITableViewCell {
     
     @IBAction func correctButtonClicked(_ sender: UIButton) {
         correctButton.isEnabled = false
+        correctButton.setImage(UIImage(named: "checkmark-gray"), for: .normal)
         incorrectButton.isEnabled = true
+        incorrectButton.setImage(UIImage(named: "cross-red"), for: .normal)
         if code != nil {
             Code.updateEval(code: code!, eval: Eval.correct.rawValue)
         }
     }
     @IBAction func incorrectButtonClicked(_ sender: UIButton) {
         correctButton.isEnabled = true
+        correctButton.setImage(UIImage(named: "checkmark-green"), for: .normal)
         incorrectButton.isEnabled = false
+        incorrectButton.setImage(UIImage(named: "cross-gray"), for: .normal)
         if code != nil {
             Code.updateEval(code: code!, eval: Eval.incorrect.rawValue)
         }

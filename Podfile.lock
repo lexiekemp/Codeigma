@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.7.3)
+  - TesseractOCRiOS (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.7)
+  - TesseractOCRiOS (= 4.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - TesseractOCRiOS
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+
+PODFILE CHECKSUM: 442c47c6567dda556b3056ce39216ea3fae9c0e0
+
+COCOAPODS: 1.5.3

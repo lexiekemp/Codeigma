@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A13C6174CA3406DE2727601 /* Pods_Codeigma.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */; };
 		E9EFD9BB216860EF00EB39A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */; };
 		E9EFD9C0216860EF00EB39A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9EFD9BE216860EF00EB39A4 /* Main.storyboard */; };
 		E9EFD9C3216860EF00EB39A4 /* Codeigma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9EFD9C1216860EF00EB39A4 /* Codeigma.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Codeigma.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9B7216860EF00EB39A4 /* Codeigma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Codeigma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9EFD9BA216860EF00EB39A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9EFD9BF216860EF00EB39A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,6 +44,8 @@
 		E9EFD9E92168775F00EB39A4 /* Bill+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataClass.swift"; sourceTree = "<group>"; };
 		E9EFD9EA2168775F00EB39A4 /* Bill+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bill+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		E9EFD9F021687C1400EB39A4 /* Code+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Code+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F0E7D9DD1007C3E937D6822E /* Pods-Codeigma.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codeigma.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma.debug.xcconfig"; sourceTree = "<group>"; };
+		FAB4DC3A880523ADB954B866 /* Pods-Codeigma.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Codeigma.release.xcconfig"; path = "Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A13C6174CA3406DE2727601 /* Pods_Codeigma.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74587001EE0047941F2354D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0E7D9DD1007C3E937D6822E /* Pods-Codeigma.debug.xcconfig */,
+				FAB4DC3A880523ADB954B866 /* Pods-Codeigma.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9DB32045B8B5462A4AB62FCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4BBCA6C670E27B6BF902CAB3 /* Pods_Codeigma.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E9EFD9AE216860EE00EB39A4 = {
 			isa = PBXGroup;
 			children = (
 				E9EFD9B9216860EF00EB39A4 /* Codeigma */,
 				E9EFD9B8216860EF00EB39A4 /* Products */,
+				74587001EE0047941F2354D6 /* Pods */,
+				9DB32045B8B5462A4AB62FCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +157,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9EFD9CC2168610200EB39A4 /* Build configuration list for PBXNativeTarget "Codeigma" */;
 			buildPhases = (
+				2F9BB9C9E46395F8739F11C8 /* [CP] Check Pods Manifest.lock */,
 				E9EFD9B3216860EF00EB39A4 /* Sources */,
 				E9EFD9B4216860EF00EB39A4 /* Frameworks */,
 				E9EFD9B5216860EF00EB39A4 /* Resources */,
+				E5688D72780E80AF66DB6983 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,6 +217,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F9BB9C9E46395F8739F11C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Codeigma-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5688D72780E80AF66DB6983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Codeigma/Pods-Codeigma-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E9EFD9B3216860EF00EB39A4 /* Sources */ = {
@@ -269,6 +336,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -330,6 +398,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -352,10 +421,12 @@
 		};
 		E9EFD9CD2168610200EB39A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0E7D9DD1007C3E937D6822E /* Pods-Codeigma.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4PHT7QB8F;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Codeigma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -371,10 +442,12 @@
 		};
 		E9EFD9CE2168610200EB39A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAB4DC3A880523ADB954B866 /* Pods-Codeigma.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M4PHT7QB8F;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Codeigma/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (

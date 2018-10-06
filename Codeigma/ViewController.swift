@@ -11,9 +11,17 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var logo: UIImageView!
+    @IBOutlet weak var googleLogin: UIView!
+    @IBOutlet weak var scanNow: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.nextView(_:)))
+        self.scanNow.addGestureRecognizer(gesture)
+
+        googleLogin.layer.cornerRadius = 30
+        scanNow.layer.cornerRadius = 30
 
         let gradientLayer = CAGradientLayer()
 
@@ -29,6 +37,10 @@ class ViewController: UIViewController {
         container.layer.addSublayer(gradientLayer)
         self.view.addSubview(container)
         self.view.sendSubviewToBack(container)
+    }
+
+    @objc func nextView(_ sender:UITapGestureRecognizer){
+        performSegue(withIdentifier: "cropSegue", sender: nil)
     }
 }
 

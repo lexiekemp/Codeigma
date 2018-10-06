@@ -10,6 +10,7 @@
 import Foundation
 import CoreData
 import UIKit
+import SwiftyJSON
 
 enum Eval: Int64 {
     case none = 0
@@ -45,6 +46,14 @@ public class Code: NSManagedObject {
         }
         return nil
     }
+    
+    class func addCodeFromJSON(bill: Bill, jsonTuple data: (String, JSON)) -> Code? {
+        guard let codeString = data.1["code"].string else { return nil }
+        guard let title = data.1["shortdescription"].string else { return nil }
+        guard let detail = data.1["longdescription"].string else { return nil }
+        return addCode(bill: bill, codeString: codeString, title: title, detail: detail)
+    }
+    
     class func updateEval(code: Code, eval: Int64) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         

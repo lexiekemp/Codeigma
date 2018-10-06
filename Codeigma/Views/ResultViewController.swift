@@ -19,8 +19,22 @@ class ResultViewController: UIViewController {
     var bill: Bill?
     
     @IBAction func nextStepClicked(_ sender: UIButton) {
+        if bill != nil {
+            self.performSegue(withIdentifier: "goToChecklist", sender: nil)
+        }
+        else {
+            self.performSegue(withIdentifier: "goToTakePhoto", sender: nil)
+        }
     }
     @IBAction func recropClicked(_ sender: Any) {
+        if let allVCs = self.navigationController?.viewControllers {
+            for vc in allVCs {
+//                if vc.isKind(of: CropViewController) {
+//                    self.navigationController?.popToViewController(vc, animated: true)
+//                }
+            }
+        }
+            self.performSegue(withIdentifier: "goToRecrop", sender: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,14 +56,17 @@ class ResultViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToChecklist" {
+            if let checklistVC = segue.destination as? ChecklistViewController {
+                checklistVC.bill = self.bill
+            }
+        }
     }
-    */
+ 
 
 }

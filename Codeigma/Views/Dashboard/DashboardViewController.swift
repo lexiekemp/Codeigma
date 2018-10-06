@@ -42,6 +42,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         updateTable()
     }
     
+    @IBAction func addBill(_ sender: UIButton) {
+    }
     func updateTable() {
         if let context = managedObjectContext {
             let request = NSFetchRequest<NSFetchRequestResult>(entityName:"Bill")

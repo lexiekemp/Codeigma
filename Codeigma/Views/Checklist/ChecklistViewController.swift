@@ -12,6 +12,8 @@ import CoreData
 class ChecklistViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
 
     @IBOutlet weak var checkListTableView: UITableView!
+    @IBOutlet weak var callNumberButton: UIButton!
+    
     var managedObjectContext: NSManagedObjectContext?
     
     var bill: Bill!
@@ -35,6 +37,7 @@ class ChecklistViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         checkListTableView.delegate = self
         checkListTableView.dataSource = self
+        callNumberButton.layer.cornerRadius = 30.0
         // Do any additional setup after loading the view.
     }
     

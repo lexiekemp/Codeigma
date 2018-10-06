@@ -9,6 +9,7 @@
 import UIKit
 import TesseractOCR
 import Alamofire
+import SwiftyJSON
 
 class LoadingViewController: UIViewController, G8TesseractDelegate {
     
@@ -23,7 +24,9 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
             tesseract.delegate = self
             tesseract.image = codeImage.g8_blackAndWhite()
             tesseract.recognize()
-            translateCodes(tesseract.recognizedText)
+            translateCodes(tesseract.recognizedText) { bill in
+                self.performSegue(withIdentifier: "goToResult", sender: bill)
+            }
         }
         // Do any additional setup after loading the view.
     }
@@ -32,9 +35,10 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
         progressView.progress = Float(tesseract.progress)
     }
     
-    func translateCodes(_ codeList: String) {
+    func translateCodes(_ codeList: String, completion: @escaping (Bill?) -> ()) {
         let codes = codeList.components(separatedBy: .whitespacesAndNewlines)
         var codesdict = [String: String]()
+        if codesdict.count == 0 { completion(nil) }
         for i in 0..<codes.count {
             codesdict[String(i)] = codes[i]
         }
@@ -43,20 +47,31 @@ class LoadingViewController: UIViewController, G8TesseractDelegate {
         ]
         
         Alamofire.request("https://71ba8e65.ngrok.io/code", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
-                print(response)
+            print(response)
+            let json = JSON(response)
+            guard let newBill = Bill.addBill() else {
+                completion(nil)
+                return
+            }
+            let iterator = json.makeIterator()
+            for item in iterator {
+                Code.addCodeFromJSON(bill: newBill, jsonTuple: item)
+            }
+            completion(newBill)
         }
         
     }
-    
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "goToResult" {
+            if let resultVC = segue.destination as? ResultViewController {
+                if let bill = sender as? Bill {
+                    resultVC.bill = bill
+                }
+            }
+        }
     }
-    */
-
 }

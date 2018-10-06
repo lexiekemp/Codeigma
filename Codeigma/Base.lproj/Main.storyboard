@@ -78,6 +78,7 @@
                     <connections>
                         <outlet property="percentageLabel" destination="mLZ-0p-acT" id="Ghu-lh-y45"/>
                         <outlet property="progressView" destination="UdZ-nC-MN1" id="BGB-m9-M9M"/>
+                        <segue destination="rx5-Vw-qhr" kind="show" identifier="goToResult" id="GGX-TP-qGs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,11 +162,12 @@
                         <outlet property="nextStepButton" destination="bDu-6o-H20" id="cx1-LY-dIh"/>
                         <outlet property="recropButton" destination="PuU-a2-yFE" id="m9G-qI-Mau"/>
                         <outlet property="titleLabel" destination="BCh-vH-guh" id="4en-dz-9o3"/>
+                        <segue destination="STL-zw-xki" kind="show" identifier="goToChecklist" id="tOR-mu-0Uk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Khz-QD-xs4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1004" y="-3.1484257871064472"/>
+            <point key="canvasLocation" x="1006" y="6"/>
         </scene>
         <!--Checklist-->
         <scene sceneID="Gn9-kk-kMd">
@@ -176,7 +178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yb-Yp-9up">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="577"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="codeCell" rowHeight="183" id="xtI-eG-MvQ" customClass="CodeTableViewCell" customModule="Codeigma" customModuleProvider="target">
@@ -283,23 +285,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQt-YQ-ENZ">
+                                <rect key="frame" x="50" y="617" width="275" height="30"/>
+                                <state key="normal" title="Call Phone Number on Bill">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NXy-s2-dYr" firstAttribute="bottom" secondItem="1yb-Yp-9up" secondAttribute="bottom" id="6PA-RG-qIa"/>
+                            <constraint firstItem="kQt-YQ-ENZ" firstAttribute="top" secondItem="1yb-Yp-9up" secondAttribute="bottom" constant="20" id="28N-ZB-bcZ"/>
+                            <constraint firstItem="NXy-s2-dYr" firstAttribute="bottom" secondItem="kQt-YQ-ENZ" secondAttribute="bottom" constant="20" id="3V6-Oe-Kze"/>
+                            <constraint firstItem="NXy-s2-dYr" firstAttribute="trailing" secondItem="kQt-YQ-ENZ" secondAttribute="trailing" constant="50" id="BQT-MZ-ZMy"/>
                             <constraint firstItem="1yb-Yp-9up" firstAttribute="leading" secondItem="NXy-s2-dYr" secondAttribute="leading" id="KOa-us-VXI"/>
                             <constraint firstItem="NXy-s2-dYr" firstAttribute="trailing" secondItem="1yb-Yp-9up" secondAttribute="trailing" id="Pwp-3I-fZf"/>
                             <constraint firstItem="1yb-Yp-9up" firstAttribute="top" secondItem="NXy-s2-dYr" secondAttribute="top" id="q9P-RQ-bhq"/>
+                            <constraint firstItem="kQt-YQ-ENZ" firstAttribute="leading" secondItem="NXy-s2-dYr" secondAttribute="leading" constant="50" id="w7G-7q-tI2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NXy-s2-dYr"/>
                     </view>
                     <connections>
+                        <outlet property="callNumberButton" destination="kQt-YQ-ENZ" id="ivA-Uc-D9k"/>
                         <outlet property="checkListTableView" destination="1yb-Yp-9up" id="IkZ-Ua-NLR"/>
+                        <segue destination="9m6-DX-5GV" kind="show" identifier="goToBills" id="5UC-3W-BHL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QUm-Sf-QhI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1712.8" y="-3.1484257871064472"/>
+            <point key="canvasLocation" x="1727" y="6"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="s6c-16-2cv">
@@ -449,6 +462,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellBackgroundView" destination="BE1-fo-RyE" id="ey3-Yn-mFs"/>
                                             <outlet property="correctCodesLabel" destination="bnK-pX-pwX" id="FGZ-4o-9SW"/>
                                             <outlet property="incorrectCodesLabel" destination="UEx-E3-vPt" id="tQi-S0-Kvc"/>
                                             <outlet property="openButton" destination="gVt-T1-WjZ" id="EiS-Ku-IaI"/>
@@ -458,10 +472,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1J-jw-Y05">
+                                <rect key="frame" x="277" y="569" width="68" height="68"/>
+                                <state key="normal" image="plus"/>
+                                <connections>
+                                    <action selector="addBill:" destination="9m6-DX-5GV" eventType="touchUpInside" id="EgG-Ph-wX6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ad8-UY-NgQ" firstAttribute="trailing" secondItem="Py3-cw-Cbe" secondAttribute="trailing" id="3LK-nk-DMe"/>
+                            <constraint firstItem="ad8-UY-NgQ" firstAttribute="bottom" secondItem="U1J-jw-Y05" secondAttribute="bottom" constant="30" id="REr-JI-BKx"/>
+                            <constraint firstItem="ad8-UY-NgQ" firstAttribute="trailing" secondItem="U1J-jw-Y05" secondAttribute="trailing" constant="30" id="egg-op-Z3i"/>
                             <constraint firstItem="Py3-cw-Cbe" firstAttribute="top" secondItem="ad8-UY-NgQ" secondAttribute="top" id="ig9-n1-oNB"/>
                             <constraint firstItem="Py3-cw-Cbe" firstAttribute="leading" secondItem="ad8-UY-NgQ" secondAttribute="leading" id="tj6-2l-nzS"/>
                             <constraint firstItem="ad8-UY-NgQ" firstAttribute="bottom" secondItem="Py3-cw-Cbe" secondAttribute="bottom" id="zzb-Mk-n9y"/>
@@ -470,16 +493,22 @@
                     </view>
                     <connections>
                         <outlet property="billTableView" destination="Py3-cw-Cbe" id="Ljh-Fx-bmy"/>
+                        <segue destination="STL-zw-xki" kind="show" identifier="goToChecklist" id="hut-ZZ-LTb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yo-hI-3sY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2418.4000000000001" y="-10.344827586206897"/>
+            <point key="canvasLocation" x="2578" y="6"/>
         </scene>
     </scenes>
     <resources>
         <image name="checkmark-green" width="17" height="14"/>
         <image name="cross-red" width="14" height="14"/>
         <image name="icon" width="69" height="54"/>
+        <image name="plus" width="68" height="68"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5UC-3W-BHL"/>
+        <segue reference="hut-ZZ-LTb"/>
+    </inferredMetricsTieBreakers>
 </document>

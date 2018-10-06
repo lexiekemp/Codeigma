@@ -15,11 +15,14 @@ class BillTableViewCell: UITableViewCell {
     @IBOutlet weak var totalCodesLabel: UILabel!
     @IBOutlet weak var correctCodesLabel: UILabel!
     @IBOutlet weak var incorrectCodesLabel: UILabel!
+    @IBOutlet weak var cellBackgroundView: UIView!
+    
     @IBOutlet weak var openButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         openButton.layer.cornerRadius = 30.0
+        cellBackgroundView.layer.cornerRadius = 10.0
         // Initialization code
     }
 

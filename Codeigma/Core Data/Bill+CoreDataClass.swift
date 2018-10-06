@@ -12,11 +12,11 @@ import CoreData
 import UIKit
 @objc(Bill)
 public class Bill: NSManagedObject {
-    class func addBill(dateCreated: NSDate) -> Bill? {
+    class func addBill() -> Bill? {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         if let bill = NSEntityDescription.insertNewObject(forEntityName:"Bill", into: context) as? Bill {
-            bill.date = dateCreated
+            bill.date = NSDate()
             
             do {
                 try context.save()
